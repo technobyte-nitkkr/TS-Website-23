@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+.homecontainer{
+    width: 100%;
+}
+
+.hc-headingline{
+    display: grid;
+    grid-template-columns: 35px calc(100% - 35px);
+    align-items: center;
+}
+
+.hc-headingline img{
+    width: 35px;
+}
+
+.hc-headingline div{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3rem;
+    padding-left: 2.5rem;
+}
+
+.hc-eclipse div{
+    width: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.hc-body{
+    display: grid;
+    grid-template-columns: 35px calc(100% - 35px);
+    margin-top: 10px;
+}
+
+.hc-body .hc-line{
+    width: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hc-body .hc-line div{
+    width: 3px;
+    height: 100%;
+    background-color: #C559EB;
+}
+
+.hc-body .hc-subbody{
+    padding: 1.5rem 2.5rem;
+}
