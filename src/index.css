@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: back-to-1982;
+  src: url('../assets/fonts/Back-To-1982/BACKTO1982.TTF');
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}

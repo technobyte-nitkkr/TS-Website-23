@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 35px calc(100% - 35px);
     align-items: center;
+    color: #FFF;
 }
 
 .hc-headingline img{
@@ -47,4 +48,5 @@
 
 .hc-body .hc-subbody{
     padding: 1.5rem 2.5rem;
+    color: #fff
 }
