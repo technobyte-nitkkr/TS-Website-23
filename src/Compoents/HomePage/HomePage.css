@@ -1,3 +1,83 @@
-.techspardha {
-  font-family: 'back-to-1982';
+/*CSS for top level sections start here*/
+
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }
+
+.homeLeftContainer {
+  padding-top: 10em;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 15px;
+}
+
+.elementContainer {
+  height: 70%;
+}
+
+
+/*CSS for top level sections ends here*/
+
+.techspardha {
+  font-family: 'backto1982';
+  color: #4C5EFF;
+  font-weight: 400;
+  font-size: 85px;
+  font-style: normal;
+  line-height: 85px; 
+  margin: 8px;
+}
+
+.festTheme {
+  font-family: "sportsball";
+  color: #fff;
+  text-shadow: 3px 3px #FFF;
+  font-style: normal;
+  line-height: 34px;
+  font-size: 28px;
+  margin-top: 25px;
+  text-align: left;
+  margin: 8px;
+  margin-top: 16px;
+  padding: 8px;
+}
+
+.presentedBy {
+  font-family: 'JetBrainsMono';
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  margin: 8px;
+  margin-top: 16px;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.presenter {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+/**/
+
+
+
+.elementSVG {
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
