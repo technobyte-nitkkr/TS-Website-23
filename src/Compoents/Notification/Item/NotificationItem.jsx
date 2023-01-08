@@ -1,4 +1,3 @@
-import Button from "../../Button/Button";
 import "./NotificationItem.css";
 
 const NotificationItem = () => {

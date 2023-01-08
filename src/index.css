@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "backto1982";
-  src: url('../assets/fonts/Back-To-1982/BACKTO1982.TTF');
+  src: url('/assets/fonts/Back-To-1982/BACKTO1982.TTF');
 }
 
 @font-face {
   font-family: "sportsball";
-  src: url('../assets/fonts/sportsball/Sportsball.ttf');
+  src: url('/assets/fonts/sportsball/Sportsball.ttf');
 }
 
 @font-face{

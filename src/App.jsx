@@ -1,5 +1,5 @@
 import "./App.css";
-import image from "../assets/background.svg";
+import image from "/assets/background.svg";
 import HomePage from "./Compoents/HomePage/HomePage";
 import Navbar from "./Compoents/Navbar/Navbar";
 function App() {

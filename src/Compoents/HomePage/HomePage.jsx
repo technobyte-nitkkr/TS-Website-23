@@ -1,5 +1,3 @@
-import Button from "../Button/Button";
-import NotificationItem from "../Notification/Item/NotificationItem";
 import NotificationList from "../Notification/List/NotificationList";
 import "./HomePage.css";
 
@@ -14,21 +12,15 @@ const HomePage = () => {
             Presented By:{" "}
             <span className="presenterLogo">
               {" "}
-              <img className="presenter" src="../../../assets/do.svg" />{" "}
+              <img className="presenter" src="/assets/do.svg" />{" "}
             </span>
             <span className="presenterLogo">
               {" "}
-              <img
-                className="presenter"
-                src="../../../assets/appwrite.svg"
-              />{" "}
+              <img className="presenter" src="/assets/appwrite.svg" />{" "}
             </span>
             <span className="presenterLogo">
               {" "}
-              <img
-                className="presenter"
-                src="../../../assets/docker.svg"
-              />{" "}
+              <img className="presenter" src="/assets/docker.svg" />{" "}
             </span>
           </div>
           <NotificationList />
@@ -36,7 +28,7 @@ const HomePage = () => {
       </div>
       <div className="homeRightContainer">
         <div className="elementContainer">
-          <img src="../../../assets/element.svg" className="elementSVG" />
+          <img src="/assets/element.svg" className="elementSVG" />
         </div>
       </div>
     </div>

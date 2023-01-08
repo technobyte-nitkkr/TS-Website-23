@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import tag from "../../../assets/home/home-tag.svg";
-import eclipse from "../../../assets/home/home-eclipse.svg";
+import tag from "/assets/home/home-tag.svg";
+import eclipse from "/assets/home/home-eclipse.svg";
 
 export default function Homecontainer({ heading, element }) {
   return (
