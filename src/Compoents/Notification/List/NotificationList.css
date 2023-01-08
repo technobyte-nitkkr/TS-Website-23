@@ -1,0 +1,10 @@
+.notificationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px;
+  margin: 8px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
