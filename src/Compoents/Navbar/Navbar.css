@@ -37,7 +37,8 @@
 }
 
 .ts-logo{
-    font-size: 0.2rem;
+    /* font-size: 0.2rem; */
+    width:20%;
 }
 
 .nav a{

@@ -1,5 +1,6 @@
 import "./Navbar.css";
-import logo from "/assets/TS_LOGO.svg";
+// import logo from "/assets/TS_LOGO.svg";
+import logo from "/assets/Techspardha.svg";
 import Button from "../Button/Button";
 
 export default function Navbar() {
