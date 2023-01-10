@@ -7,7 +7,7 @@ const HomePage = () => {
       <div className="homeLeftContainer">
         <div className="titleContainer">
           <h1 className="techspardha"> TECHSPARDHA </h1>
-          <h3 className="festTheme"> UNRAVELLING DIMENSIONS </h3>
+          <h3 className="festTheme"> PRISM OF POSSIBILITIES </h3>
           <div className="presentedBy">
             Presented By:{" "}
             <span className="presenterLogo">
