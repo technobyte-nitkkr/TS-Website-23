@@ -3,8 +3,7 @@ import image from "/assets/Main-background.svg";
 import HomePage from "./Components/HomePage/HomePage";
 import Navbar from "./Components/Navbar/Navbar";
 import Homecontainer from "./Components/Homecontainer/Homecontainer";
-import Footer from "./Compoents/Footer/footer";
-
+import Footer from "./Components/Footer/footer";
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
       </div>
       <HomePage />
       <Homecontainer />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
