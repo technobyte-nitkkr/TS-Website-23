@@ -1,0 +1,105 @@
+.foot{
+    height: 461px;
+    color: white;
+    display: flex;
+   text-decoration-style: none;
+    background: rgba(13, 13, 13, 0.6);
+   /* border: 1px solid #8B949E;*/
+    backdrop-filter: blur(24px);
+   /* top: 2;*/
+}
+.Box-column{
+    padding: 0;
+    margin-top: 60px;
+}
+.Box-Row-2{
+    background-color: dimgray;
+    height:15%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.Box-Row-2 {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 60px;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ul1{
+    display: flex;
+    align-items: center;
+}
+.ul1 p
+{
+    padding-right: 30px;
+}
+/*.ul2{
+    padding-left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ul2 li
+{
+    padding: 0 5px;
+}*/
+.Box-Row-1{
+    height:85%;
+}
+.ts-logo2{
+    /* font-size: 0.2rem; */
+    width:50%;
+}
+.column {
+    float: left;
+    width: 25%;
+  }
+.Box-1{
+    float: left;
+    width: 50%;
+}
+.Box-2{
+    float: right;
+    width: 50%;
+}
+.icons{
+    size: 80%;
+}
+@media (max-width : 500px) {
+    .Box-1{
+        float: top;
+        height:20%;
+    }
+    .Box-2{
+        float: bottom;
+        height:80%;
+    }
+    
+}
+
+
+.footer-menu{
+    padding-left: 50%;
+    float: right;
+
+  
+  }
+  .footer-menu ul{
+    display: flex;
+  }
+  .footer-menu ul li{
+  padding-right: 10px;
+  }
+
+  @media (max-width:500px) {
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    }

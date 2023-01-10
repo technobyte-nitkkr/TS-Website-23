@@ -2,6 +2,7 @@ import "./App.css";
 import image from "/assets/background.svg";
 import HomePage from "./Compoents/HomePage/HomePage";
 import Navbar from "./Compoents/Navbar/Navbar";
+import Footer from "./Compoents/Footer/footer";
 function App() {
   return (
     <div
@@ -20,6 +21,7 @@ function App() {
     >
       <Navbar />
       <HomePage />
+      <Footer/>
     </div>
   );
 }
