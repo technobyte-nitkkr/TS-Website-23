@@ -1,0 +1,35 @@
+.sponsorsElementContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.sponsorCarouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.sponsorIcon {
+  display: inline-block;
+  margin: 0.5rem;
+
+}
+
+.onboardingEmail {
+  font-family: 'segoeui';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.sponsorEmailInpContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
