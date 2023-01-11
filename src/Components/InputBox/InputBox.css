@@ -1,0 +1,11 @@
+.inpBoxContainer {
+  width: 100%;
+}
+
+.inpBox {
+  width: 100%;
+  height: 3.75rem;
+  font-family: 'JetBrainsMono';
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
