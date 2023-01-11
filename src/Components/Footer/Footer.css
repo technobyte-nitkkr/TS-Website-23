@@ -2,10 +2,10 @@
     height: 461px;
     color: white;
     display: flex;
-   text-decoration-style: none;
-    background: rgba(13, 13, 13, 0.6);
-   /* border: 1px solid #8B949E;*/
+    text-decoration-style: none;
+    background: #0D1117;
     backdrop-filter: blur(24px);
+   /* border: 1px solid #8B949E;*/
    /* top: 2;*/
 }
 .Box-column{
@@ -13,7 +13,7 @@
     margin-top: 60px;
 }
 .Box-Row-2{
-    background-color: dimgray;
+    background-color: #161B22;
     height:15%;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
     align-items: center;
     list-style-type: none;
     height: 60px;
-    color: blanchedalmond;
+    color: #8B949E;
     display: flex;
     justify-content: center;
     align-items: center;
