@@ -6,6 +6,7 @@ import Homecontainer from "./Components/Homecontainer/Homecontainer";
 import Footer from "./Components/Footer/Footer";
 import Sponsors from "./Components/Sponsors/Sponsors";
 import TestimonialCarousel from "./Components/Testimonial/Carousel/TestimonialCarousel";
+import EventCarousel from "./Components/Events/Carousel/EventCarousel";
 import TimeLine from "./Components/Timeline/TimeLine";
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
        >
          <HomePage />
          <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
+         <Homecontainer
+            heading={"Event Categories"}
+            element={<EventCarousel />}
+          />
          <Homecontainer
            heading={"Testimonials"}
            element={<TestimonialCarousel />}
