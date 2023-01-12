@@ -55,3 +55,11 @@
   padding: 0px;
   margin: 0px;
 }
+
+.text-dull{
+  color: #868587;
+}
+
+.text-bright{
+  color: white;
+}
