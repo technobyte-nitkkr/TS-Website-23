@@ -1,0 +1,15 @@
+.carouselCardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+}
+.carouselCardContainer::-webkit-scrollbar {
+    display: none;
+}
+  
+.carouselCardContainer {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
