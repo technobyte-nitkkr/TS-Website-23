@@ -7,7 +7,16 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <img src={logo} alt="Techspardha" className="ts-logo" />
+      <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div className="navbar-links">
       <ul className="navMenus">
+      <li className="navbarItem Buttonclose">
+      <a href="/close">Close X</a>
+        </li>
         <li className="navbarItem">
           <a href="/events">EVENTS</a>
         </li>
@@ -23,7 +32,7 @@ export default function Navbar() {
         <li className="navbarItem">
           <a href="/discord">DISCORD</a>
         </li>
-        <li className="navbarItem">
+        <li className="navbarItem Button1">
           <Button
             symbol={"▶️"}
             btnText={"Login"}
@@ -32,6 +41,7 @@ export default function Navbar() {
           />
         </li>
       </ul>
+      </div>
     </nav>
   );
 }
