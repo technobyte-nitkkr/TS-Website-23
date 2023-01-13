@@ -6,6 +6,7 @@ import Homecontainer from "./Components/Homecontainer/Homecontainer";
 import Footer from "./Components/Footer/Footer";
 import Sponsors from "./Components/Sponsors/Sponsors";
 import TestimonialCarousel from "./Components/Testimonial/Carousel/TestimonialCarousel";
+import Popup from "./Components/Popup/Popup";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         }}
       >
         <HomePage />
+        <Popup />
         <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
         <Homecontainer
           heading={"Testimonials"}

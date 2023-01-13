@@ -1,0 +1,16 @@
+.URLBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #0D1117;
+  color: #FFF;
+  font-size: 14px;
+  box-sizing: border-box;  
+  border: 1px solid #30363D;
+  border-radius: 6px;
+  font-family: 'segoeui';
+  /* width: 100%; */
+  /* height: 100%; */
+  /* padding: 0 10px; */
+}
