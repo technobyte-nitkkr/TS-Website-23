@@ -11,45 +11,45 @@ import TimeLine from "./Components/Timeline/TimeLine";
 
 function App() {
   return (
-     <div
-       className="App"
-       style={{
-         backgroundImage: `url(${image})`,
-         backgroundColor: "#000000",
-         height: "100vh",
-         margin: "0px",
-         overflowY: "scroll",
-         overflowX: "hidden",
-         scrollbarWidth: "none",
-         msOverflowStyle: "none",
-       }}
-     >
-       <div
-         style={{
-           paddingLeft: "3rem",
-         }}
-       >
-         <Navbar />
-       </div>
-       <div
-         style={{
+    <div
+      className="App"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundColor: "#000000",
+        height: "100vh",
+        margin: "0px",
+        overflowY: "scroll",
+        overflowX: "hidden",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+      }}
+    >
+      <div
+        style={{
           paddingLeft: "3rem",
-         }}
-       >
-         <HomePage />
-         <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
-         <Homecontainer
-            heading={"Event Categories"}
-            element={<EventCarousel />}
-          />
-         <Homecontainer
-           heading={"Testimonials"}
-           element={<TestimonialCarousel />}
-         />
-       </div>
-       <div>
-         <Footer />
-       </div>
+        }}
+      >
+        <Navbar />
+      </div>
+      <div
+        style={{
+          paddingLeft: "3rem",
+        }}
+      >
+        <HomePage />
+        <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
+        <Homecontainer
+          heading={"Event Categories"}
+          element={<EventCarousel />}
+        />
+        <Homecontainer
+          heading={"Testimonials"}
+          element={<TestimonialCarousel />}
+        />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
