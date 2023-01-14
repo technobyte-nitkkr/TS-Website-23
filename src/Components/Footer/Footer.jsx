@@ -21,172 +21,176 @@ export default function Footer() {
               <img src={logo} alt="Techspardha_Icon" className="ts-logo2" />
             </div>
             <div className="Box-2">
-              <div className="column">
-                <ul class="">
-                  <li>
-                    <a href="#!" class="text-white">
-                      Product
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Security
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Team
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Enterprise
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Customer Stories
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      The readME Project
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Resources
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Roadmap
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <div className="Part1">
+                <div className="column1">
+                  <ul className="">
+                    <li>
+                      <a href="#!" className="text-white">
+                        Product
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Features
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Security
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Team
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Enterprise
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Customer Stories
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        The readME Project
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Pricing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Resources
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Roadmap
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-              <div className="column">
-                <ul class="">
-                  <li>
-                    <a href="#!" class="text-white">
-                      Platform
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Developer API
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Partners
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Electron
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Github Desktop
-                    </a>
-                  </li>
-                </ul>
+                <div className="column2">
+                  <ul className="">
+                    <li>
+                      <a href="#!" className="text-white">
+                        Platform
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Developer API
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Partners
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Electron
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Github Desktop
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="column">
-                <ul class="">
-                  <li>
-                    <a href="#!" class="text-white">
-                      Support
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Docs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Community Forum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Profesional Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Skills
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Status
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Contact Github
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="column">
-                <ul class="">
-                  <li>
-                    <a href="#!" class="text-white">
-                      Company
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Careers
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Press
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Inclusion
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Social Impact
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-white">
-                      Shop
-                    </a>
-                  </li>
-                </ul>
+              <div className="Part2">
+                <div className="column3">
+                  <ul className="">
+                    <li>
+                      <a href="#!" className="text-white">
+                        Support
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Docs
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Community Forum
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Profesional Services
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Skills
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Status
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Contact Github
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="column4">
+                  <ul className="">
+                    <li>
+                      <a href="#!" className="text-white">
+                        Company
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        About
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Blog
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Careers
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Press
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Inclusion
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Social Impact
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" className="text-white">
+                        Shop
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -199,30 +203,30 @@ export default function Footer() {
               <p>Site Map</p>
               <p>What is Git?</p>
             </div>
-            <div class="footer-menu">
+            <div className="footer-menu">
               <ul className="ul2">
                 <li>
-                  <FaTwitter className="icons" />
+                  <FaTwitter size={"1.3em"} className="icons" />
                 </li>
                 <li>
                   {" "}
-                  <FaFacebookSquare className="icons" />
+                  <FaFacebookSquare size={"1.3em"} className="icons" />
                 </li>
                 <li>
                   {" "}
-                  <FaLinkedinIn className="icons" />
+                  <FaLinkedinIn size={"1.3em"} className="icons" />
                 </li>
                 <li>
-                  <FaYoutube className="icons" />
+                  <FaYoutube size={"1.3em"} className="icons" />
                 </li>
                 <li>
-                  <FaTwitch className="icons" />
+                  <FaTwitch size={"1.3em"} className="icons" />
                 </li>
                 <li>
-                  <FaTiktok className="icons" />
+                  <FaTiktok size={"1.3em"} className="icons" />
                 </li>
                 <li>
-                  <FaGithub className="icons" />
+                  <FaGithub size={"1.3em"} className="icons" />
                 </li>
               </ul>
             </div>

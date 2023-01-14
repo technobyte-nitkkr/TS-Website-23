@@ -1,24 +1,27 @@
-.foot{
+.foot {
     height: 461px;
     color: white;
     display: flex;
     text-decoration-style: none;
     background: #0D1117;
     backdrop-filter: blur(24px);
-   /* border: 1px solid #8B949E;*/
-   /* top: 2;*/
+    /* border: 1px solid #8B949E;*/
+    /* top: 2;*/
 }
-.Box-column{
-    padding: 0;
+
+.Box-column {
     margin-top: 60px;
 }
-.Box-Row-2{
+
+.Box-Row-2 {
     background-color: #161B22;
-    height:15%;
+    height: 15%;
+    float: bottom;
     display: flex;
     align-items: center;
-    position: relative;
+    /* position: relative;*/
 }
+
 .Box-Row-2 {
     display: flex;
     align-items: center;
@@ -28,78 +31,162 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.ul1{
-    display: flex;
-    align-items: center;
+
+
+
+.Box-Row-1 {
+    height: 85%;
 }
-.ul1 p
-{
-    padding-right: 30px;
-}
-/*.ul2{
-    padding-left: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ul2 li
-{
-    padding: 0 5px;
-}*/
-.Box-Row-1{
-    height:85%;
-}
-.ts-logo2{
+
+.ts-logo2 {
     /* font-size: 0.2rem; */
-    width:50%;
-}
-.column {
-    float: left;
-    width: 25%;
-  }
-.Box-1{
-    float: left;
     width: 50%;
 }
-.Box-2{
-    float: right;
-    width: 50%;
+
+.Box-1 {
+    padding: auto;
 }
-.icons{
-    size: 80%;
+
+.Box-2 {
+    padding: auto;
 }
-@media (max-width : 500px) {
-    .Box-1{
-        float: top;
-        height:20%;
+
+.icons {
+    size: 5em;
+}
+
+@media (max-width : 850px) {
+    .foot {
+        height: 780px;
     }
-    .Box-2{
+
+    .Box-1 {
+        float: top;
+        height: 15%;
+        width: auto;
+        padding: 0;
+
+    }
+
+    .Box-2 {
+        width: auto;
         float: bottom;
-        height:80%;
+        height: 85%;
+        padding-left: 35px;
+        
+    }
+
+    .ul1 {
+        display: flex;
+        padding-bottom: 50px;
+        align-items: center;
+        align-content: center;
+        padding-left:auto;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .ul1 p {
+        padding-right: 30px;
+        display: flex;
+        font-size:xx-small;
+    }
+
+    .column1,
+    .column2 {
+        float: left;
+        width: 50%;
+    
+    }
+    .Part1{
+        float: top;
+        height: 55%;
+    }
+    .Part2{
+        height: max-content;
+        float: bottom;
+    }
+    .column3 {
+        width: 50%;
+        float: left;
+    }
+
+    .column4 {
+        float: left;
+        width: 50%;
+    }
+
+    .Box-Row-2 {
+        width: auto;
+        height: 30%;
+        display:inline;
+        align-items: center;
+        align-content: center;
+        background-color: #161B22;
+    }
+
+    .footer-menu {
+        display: flex;
+        padding-left: 25%;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer-menu ul {
+        display: flex;
+    }
+
+    .footer-menu ul li {
+        padding-right: 10px;
+    }
+
+
+
+}
+
+@media (min-width : 850px) {
+    .Box-1 {
+        float: left;
+        width: 30%;
+    }
+
+    .Box-2 {
+        float: right;
+        width: 70%;
+    }
+
+    .column1,
+    .column2,
+    .column3,
+    .column4 {
+        float: left;
+        width: 25%;
+    }
+
+    .footer-menu {
+       /* padding-left: 50%;*/
+        float: right;
+
+    }
+
+    .footer-menu ul {
+        display: flex;
+    }
+
+    .footer-menu ul li {
+        padding-right: 10px;
+    }
+    .ul1 {
+        display: flex;
+        align-items: center;
+        padding-right: 250px;
     }
     
+    .ul1 p {
+        padding-right: 30px;
+        display: flex;
+    }
+
 }
-
-
-.footer-menu{
-    padding-left: 50%;
-    float: right;
-
-  
-  }
-  .footer-menu ul{
-    display: flex;
-  }
-  .footer-menu ul li{
-  padding-right: 10px;
-  }
-
-  @media (max-width:500px) {
-    .footer-menu ul{
-      display: flex;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-    }
