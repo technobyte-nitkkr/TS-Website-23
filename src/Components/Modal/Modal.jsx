@@ -3,11 +3,11 @@ import "./style.css"
 import React, { useState } from 'react'
 import SearchBox from "./SearchBox"
 
-export default function Modal({element, menuItems, onMenuClick}) {
+export default function Modal({element, menuItems, onMenuClick, onClickOutside}) {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <div>
-            <div className="modal-cover"></div>
+            <div className="modal-cover" onClick={onClickOutside}></div>
             <div className="modal-container">
                 <div className="modal-top">
                     <div className="tag"><img src="/assets/modal/tag.png" alt="" className="modal-top-img"/></div>
@@ -37,4 +37,4 @@ export default function Modal({element, menuItems, onMenuClick}) {
 }
 
 
-{/* <Modal menuItems={[{label:"Hackshetra"}, {label:"BlackBox"}]} onMenuClick={function} element={<Element/>}/> */}
+{/* <Modal menuItems={[{label:"Hackshetra"}, {label:"BlackBox"}]} onMenuClick={function} element={<Element/>} onClickOutside={onClickOutside}/> */}
