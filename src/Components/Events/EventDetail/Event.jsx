@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Modal from '../Modal/Modal'
-import Terminal from '../Terminal/Terminal'
+import Modal from '../../Modal/Modal'
+import Terminal from '../../Terminal/Terminal'
 import "./style.css"
 
 export default function Event() {

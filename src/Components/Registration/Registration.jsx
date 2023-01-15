@@ -18,7 +18,7 @@ export default function Registration() {
                 </div>
                 <textarea name="about_you" className="reg-input reg-textarea" placeholder='What qualities do you possess?'></textarea>
                 <div className="buttonContainer">
-                    <Button btnText="Register" />
+                    <Button btnText="Register" symbol={"▶️"}/>
                 </div>
             </form>
         </div>
