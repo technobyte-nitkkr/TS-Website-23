@@ -50,3 +50,22 @@
 .eventCardTitle{
     text-align: center;
 }
+
+@media only screen and (max-width: 1100px) {
+    .eventCardContainer{
+        min-width: 300px;
+        width: 300px;
+    }
+    .eventCardImageWrapper>img{
+        width: 100%;
+        height: unset;
+    }
+    .eventCardImageWrapper{
+        padding: 20px;
+        border-radius: 15px 15px 8px 8px;
+    }
+    .eventCardTitleContainer{
+        font-size: 12px;
+        border-radius: 0px 0px 8px 8px;
+    }
+}

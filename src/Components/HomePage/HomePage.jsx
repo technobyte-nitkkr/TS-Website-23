@@ -28,7 +28,7 @@ const HomePage = () => {
       </div>
       <div className="homeRightContainer">
         <div className="elementContainer">
-          <img src="/assets/element.svg" className="elementSVG" />
+          <img src="/assets/element.png" className="elementSVG" />
         </div>
       </div>
     </div>

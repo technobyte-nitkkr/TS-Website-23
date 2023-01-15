@@ -8,7 +8,7 @@
 }
 
 .homeLeftContainer {
-  padding-top: 10em;
+  padding-top: 50px;
 }
 
 .titleContainer {
@@ -21,6 +21,13 @@
 
 .elementContainer {
   height: 70%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.elementContainer img{
+  max-width: 500px;
 }
 
 
