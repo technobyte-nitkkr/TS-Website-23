@@ -25,18 +25,10 @@ function App() {
         msOverflowStyle: "none",
       }}
     >
-      <div
-        style={{
-          paddingLeft: "3rem",
-        }}
-      >
+      <div className="home-div">
         <Navbar />
       </div>
-      <div
-        style={{
-          paddingLeft: "3rem",
-        }}
-      >
+      <div className="home-div">
         <HomePage />
         <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
         <Homecontainer

@@ -9,8 +9,8 @@ const HomePage = () => {
           <h1 className="techspardha"> TECHSPARDHA </h1>
           <h3 className="festTheme"> PRISM OF POSSIBILITIES </h3>
           <div className="presentedBy">
-            Presented By:{" "}
-            <span className="presenterLogo">
+            <div>Presented By:</div>
+            <div><span className="presenterLogo">
               {" "}
               <img className="presenter" src="/assets/do.svg" />{" "}
             </span>
@@ -21,7 +21,7 @@ const HomePage = () => {
             <span className="presenterLogo">
               {" "}
               <img className="presenter" src="/assets/docker.svg" />{" "}
-            </span>
+            </span></div>
           </div>
           <NotificationList />
         </div>

@@ -5,6 +5,10 @@
     font-size: 35px;
 }
 
+.reg-container p{
+    margin: 20px 0px;
+}
+
 .reg-input{
     border: none;
     width: 100%;
@@ -29,4 +33,10 @@
 .reg-mobile{
     display: flex;
     width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    .reg-container h2{
+        font-size: 24px;
+    }
 }
