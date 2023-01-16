@@ -1,6 +1,6 @@
 import "./TestimonialCard.css";
 
-const TestimonialCard = () => {
+const TestimonialCard = ({name, postition, profileImg}) => {
   return (
     <div className="testimonialCardContainer">
       <div className="testimonicalCardContent">
@@ -18,11 +18,11 @@ const TestimonialCard = () => {
       </div>
       <div className="testimonicalCardPerson">
         <div className="testimonialCardPersonAvatar">
-          <img src="/assets/avatars/avatar.svg" />
+          <img src={profileImg} />
         </div>
         <div className="testimonialCardPersonName">
-          <div className="personName"> Aman Saini </div>
-          <div className="personDesignation"> UI/UX Developer </div>
+          <div className="personName"> {name} </div>
+          <div className="personDesignation"> {postition} </div>
         </div>
       </div>
     </div>

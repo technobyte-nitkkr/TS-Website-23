@@ -4,29 +4,30 @@
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.2);
-  width: 100%;
-  height: 500px;
-  margin: 12px;
+  min-width: 400px;
+  margin: 30px 20px;
   transition: all 0.5s;
-  /* padding: 12px; */
+  padding: 20px;
+  cursor: pointer;
 }
 
 .testimonialCardContainer:hover {
-  padding: 12px;
+  scale: 1.05;
 }
 
 .testimonicalCardContent {
   font-family: 'segoeui';
-  height: 400px;
   font-weight: 400;
   font-size: 16px;
   padding: 12px;
   /* margin: 0px; */
   background-color: #ffffff;
   color: #000;
+  transition: all 0.5s;
 }
 
-.testimonicalCardContent:hover {  
+.testimonialCardContainer:hover .testimonicalCardContent{  
+  color: white;
   background-color: #1C1C1C;
 }
 
@@ -53,4 +54,33 @@
 .personDesignation {
   font-weight: 500;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .testimonicalCardContent{
+    font-size: 14px;
+  }
+  .testimonialCardContainer{
+    min-width: 300px;
+    margin: 20px;
+  }
+  .testimonicalCardPerson{
+    padding: 0px;
+    margin: 0px;
+  }
+  .testimonialCardPersonName{
+    font-size: 14px;
+  }
+  .personDesignation{
+    font-size: 12px;
+  }
+  .testimonialCardPersonAvatar{
+    width: 80px;
+  }
+  .testimonialCardPersonName{
+    line-height: unset;
+  }
+  .testimonicalCardPerson{
+    margin: 20px 0px;
+  }
 }

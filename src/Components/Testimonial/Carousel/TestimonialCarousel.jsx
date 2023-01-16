@@ -5,10 +5,11 @@ const TestimonialCarousel = () => {
   return (
     <div>
       <div className="carouselCardContainer">
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
+        <TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/>
+        <TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/>
+        <TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/>
+        <TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/>
+        <TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/>
       </div>
     </div>
   );
