@@ -1,12 +1,15 @@
 import "./Navbar.css";
-// import logo from "/assets/TS_LOGO.svg";
-import logo from "/assets/Techspardha.svg";
+// import TSlogo from "/assets/TS_LOGO.svg";
+import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
 
 export default function Navbar() {
   return (
     <nav className="nav">
+      {/* <div className="logosContainer"> */}
+      {/* <img src={TSlogo} alt="TSLogo" className="ts-logo-icon" /> */}
       <img src={logo} alt="Techspardha" className="ts-logo" />
+      {/* </div> */}
       <ul className="navMenus">
         <li className="navbarItem">
           <a href="/events">EVENTS</a>
