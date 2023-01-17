@@ -1,6 +1,5 @@
 import "./App.css";
 import image from "/assets/Main-background.svg";
-import HomePage from "./Components/HomePage/HomePage";
 import Navbar from "./Components/Navbar/Navbar";
 import Homecontainer from "./Components/Homecontainer/Homecontainer";
 import Footer from "./Components/Footer/Footer";
@@ -9,6 +8,9 @@ import TestimonialCarousel from "./Components/Testimonial/Carousel/TestimonialCa
 import EventCarousel from "./Components/Events/Carousel/EventCarousel";
 import TimeLine from "./Components/Timeline/TimeLine";
 import Registration from "./Components/Registration/Registration";
+import Team from "./Pages/Team";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -25,25 +27,18 @@ function App() {
         msOverflowStyle: "none",
       }}
     >
-      <div className="home-div">
-        <Navbar />
-      </div>
-      <div className="home-div">
-        <HomePage />
-        <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
-        <Homecontainer
-          heading={"Event Categories"}
-          element={<EventCarousel />}
-        />
-        <Homecontainer heading={"Registeration"} element={<Registration />} />
-        <Homecontainer
-          heading={"Testimonials"}
-          element={<TestimonialCarousel />}
-        />
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <Router>
+        <div className="home-div">
+          <Navbar />
+        </div>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/team" element={<Team />} />
+        </Routes>
+        <div>
+          <Footer />
+        </div>
+      </Router>
     </div>
   );
 }

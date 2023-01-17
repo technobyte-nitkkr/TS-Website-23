@@ -21,7 +21,7 @@ export default function Navbar() {
           <a href="/about">ABOUT</a>
         </li>
         <li className="navbarItem">
-          <a href="/discord">DISCORD</a>
+          <a href="/team">TEAM</a>
         </li>
         <li className="navbarItem">
           <Button

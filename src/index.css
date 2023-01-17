@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face{
-  font-family:"segoe ui";
-  font-style:normal;
-  font-weight:400;
-  src: url('https://fonts.cdnfonts.com/s/15051/Segoe UI.woff') format('woff2');
-}
-@font-face{
-  font-family:"segoe ui";
-  font-style:italic;
-  font-weight:400;
-  src: url('https://fonts.cdnfonts.com/s/15051/Segoe UI Italic.woff') format('woff2');
-}
-@font-face{
-  font-family:"segoe ui";
-  font-style:normal;
-  font-weight:700;
-  src: url('https://fonts.cdnfonts.com/s/15051/Segoe UI Bold.woff') format('woff2');
-}
-@font-face{
-  font-family:"segoe ui";
-  font-style:italic;
-  font-weight:700;
-  src: url('https://fonts.cdnfonts.com/s/15051/Segoe UI Bold Italic.woff') format('woff2');
-} */
 
 @font-face {
   font-family: "segoeui";
