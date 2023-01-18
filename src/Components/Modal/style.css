@@ -1,7 +1,7 @@
 .modal-cover{
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;  
     background-color: rgba(0, 0, 0, 0.185);
@@ -47,7 +47,7 @@
 }
 
 .modal-menu-items{
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 100%;
     color: white;

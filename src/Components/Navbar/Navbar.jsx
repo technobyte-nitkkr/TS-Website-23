@@ -2,6 +2,7 @@ import "./Navbar.css";
 // import TSlogo from "/assets/TS_LOGO.svg";
 import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -23,9 +24,11 @@ export default function Navbar() {
         <li className="navbarItem">
           <a href="/about">ABOUT</a>
         </li>
-        <li className="navbarItem">
-          <a href="/team">TEAM</a>
-        </li>
+        <Link to="/team">
+          <li className="navbarItem">
+            <a href="">TEAM</a>
+          </li>
+        </Link>
         <li className="navbarItem">
           <Button
             symbol={"▶️"}

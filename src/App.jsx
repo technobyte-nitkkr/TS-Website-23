@@ -31,12 +31,14 @@ function App() {
         <div className="home-div">
           <Navbar />
         </div>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/team" element={<Team />} />
-        </Routes>
         <div>
-          <Footer />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/team" element={<Team />} />
+          </Routes>
+          <div>
+            <Footer />
+          </div>
         </div>
       </Router>
     </div>

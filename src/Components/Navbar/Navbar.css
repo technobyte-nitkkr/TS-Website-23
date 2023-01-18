@@ -17,8 +17,11 @@
     background: rgba(13, 13, 13, 0.6);
     border: 1px solid #8B949E;
     backdrop-filter: blur(24px);
-    top: 2;
-    position: sticky;
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+    /* position: absolute; */
+    /* z-index: 100; */
 }
 
 .navMenus {
