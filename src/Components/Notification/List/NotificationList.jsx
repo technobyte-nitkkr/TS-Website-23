@@ -1,11 +1,19 @@
 import "./NotificationList.css";
 import NotificationItem from "../Item/NotificationItem";
 import Button from "../../Button/Button";
-import Popup from "reactjs-popup";
+// import Popup from "reactjs-popup";
 import TimeLine from "../../Timeline/TimeLine";
 // import "reactjs-popup/dist/index.css";
+import Overlay from "react-overlay-component";
+import { useState } from "react";
 
 const NotificationList = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeOverlay = () => setIsOpen(false);
+  const configs = {
+    animate: true,
+  };
   return (
     <div id="sponsorElementHelper" className="notificationContainer">
       <NotificationItem />
@@ -13,24 +21,17 @@ const NotificationList = () => {
       <NotificationItem />
       <NotificationItem />
       <NotificationItem />
-      <div className="notificationBtnContainer">
+      <div
+        className="notificationBtnContainer"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      >
         <Button btnText="View them all" />
-        {/* <Popup
-          trigger={
-            <button
-              // style={{ width: { btnWidth }, height: { btnHeight } }}
-              className="btnContainer"
-            >
-              <span> View them all </span>
-            </button>
-          }
-          position="right"
-        >
-        </Popup> */}
       </div>
-      {/* <div className="notificationPopupContainer"> */}
-      {/* <TimeLine /> */}
-      {/* </div> */}
+      <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
+        <TimeLine />
+      </Overlay>
     </div>
   );
 };
