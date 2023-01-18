@@ -120,12 +120,13 @@ margin: 0;
   height: 150px;
   /*border: 1px solid rgba(255,255,255,.5);*/
   box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
-  margin-left: 35%;
+  margin-left: 24%;
 }
 
 .profile-card header h1{
-  font-weight: 200;
-  font-size: 42px;
+  font-family: 'JetBrainsMono';
+  font-weight: 700;
+  font-size: 30px;
   color: white;
   letter-spacing: -3px;
   margin: 0;
@@ -142,6 +143,7 @@ margin: 0;
 }
 
 .profile-card  p{
+  font-family:'segoeui';
   font-weight: 400;
   font-size: 14px;
   color: white;
@@ -221,6 +223,7 @@ color: grey;
 
 @media screen and (max-width: 800px) {
 .profile-card{
-  width: 80vw !important;
+  width: 58vw !important;
+  font-size: 25px;
 }
 }  

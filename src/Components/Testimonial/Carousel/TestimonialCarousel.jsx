@@ -9,11 +9,21 @@ const TestimonialCarousel = () => {
   return (
     <div>
       <Swiper
-        slidesPerView={3}
+        breakpoints={{
+          576: {
+            width: 576,
+            slidesPerView: 1,
+          },
+          768: {
+            width: 768,
+            slidesPerView: 2,
+            spaceBetween:100,
+          },
+        }}
         spaceBetween={70}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         pagination={{
