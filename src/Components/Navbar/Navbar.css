@@ -133,7 +133,7 @@
 
 @media (max-width:900px) {
     .logoLink {
-        width: 200%;
+        width: 20%;
     }
     
     .toggle-button {
@@ -196,8 +196,8 @@
         margin-bottom: 20%;
     }
     .ts-logo {
-        width: max-content;
-        height: 80%;
+        /* width: max-content; */
+        /* height: 80%; */
     }
 
     .nav {

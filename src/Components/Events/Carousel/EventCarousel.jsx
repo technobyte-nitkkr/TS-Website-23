@@ -6,7 +6,7 @@ import Button from "../../Button/Button";
 
 const EventCarousel = () => {
   return (
-    <div>
+    <div id="eventElement">
       <div className="carouselCardContainer">
         <EventCard
           eventImage={papyrusVitaeEventImage}
@@ -25,7 +25,7 @@ const EventCarousel = () => {
           eventTitle="Programming"
         />
       </div>
-      <div className="buttonContainer" id="aboutElementHelper">
+      <div className="buttonContainer" id="glHelper">
         <Button btnText="View them all" />
       </div>
     </div>

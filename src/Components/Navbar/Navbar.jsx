@@ -8,11 +8,11 @@ export default function Navbar() {
   return (
     <nav className="nav">
       {/* <div> */}
-      <div className="logo-div">
+      {/* <div className="logo-div"> */}
       <Link to="/" className="logoLink">
         <img src={logo} alt="Techspardha" className="ts-logo" />
       </Link>
-      </div>
+      {/* </div> */}
       <div
         href="#"
         class="toggle-button"
@@ -47,7 +47,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navbarItem">
-            <a href="/lectures">LECTURES</a>
+            <Link to={{ pathname: "/", hash: "#lectures" }}>
+              <a href="/lectures">LECTURES</a>
+            </Link>
           </li>
           <li className="navbarItem">
             <Link to={{ pathname: "/", hash: "#about" }}>
