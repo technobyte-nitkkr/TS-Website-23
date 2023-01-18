@@ -1,0 +1,226 @@
+  
+
+.mainContentGL{
+  /* position: relative; */
+position: relative;
+/* background-color: blue; */
+  width: 90%  ;
+margin: 0 auto;
+padding: 0;
+  /* top: 250px; */
+/* width: 100% !important; */
+   
+  /* max-height: 400vh; */ 
+  padding-bottom: 100px;
+}
+
+.carouselGL{
+  margin:auto;
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.guestLecture{
+  padding: 15px 50px;
+  margin: 70px auto;
+  border-radius: 0 70px 0 70px;
+  border: 5px solid white;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  width: 85%;
+}
+
+.col-md-8{
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.headingGL{
+  /* position: absolute; */
+  font-size:3rem;
+  margin: 20px auto !important;
+/* background-color: red; */
+width: 100% !important;
+font-weight: 500;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+  /* text-align: center; */
+  color: #fff;
+  text-align: center;
+}
+
+.faSocial{
+font-size: 2rem;
+margin: 0;
+/* background-color: blue; */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+.profile-card{
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 4px 80px #4890ff2f;
+      background-color: rgba(204, 204, 204, 0.225);
+  /* position: relative; */
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+  width: 24vw ;
+  /* background: rgba(255,255,255,1); */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+}
+
+.profile-card header{
+  display: block;
+  position: relative;
+  /* background: rgba(255,255,255,1); */
+  text-align: center;
+  padding: 30px 0 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.profile-card header:before{
+  content: "";
+  position: absolute;
+  background: url('http://ali.shahab.pk/blur.php?img=http://ali.shahab.pk/ali-shahab.jpg&x=60') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.profile-card header:after{
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.profile-card header img{
+  border-radius: 100%;
+  border: 3px solid white;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  /*border: 1px solid rgba(255,255,255,.5);*/
+  box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
+  margin-left: 35%;
+}
+
+.profile-card header h1{
+  font-weight: 200;
+  font-size: 42px;
+  color: white;
+  letter-spacing: -3px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card header h2{
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  letter-spacing: .5px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card  p{
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  letter-spacing: .5px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card .profile-bio{
+  padding: 0 30px;
+  text-align: center;
+  color: #888;
+}
+
+ .profile-social-links{
+  display: flex;
+  /* background-color: red; */
+  /* margin: 30px auto; */
+  margin: 30px auto;
+  padding: 0;
+  
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.profile-card .profile-social-links li{
+  display: table-cell;
+  width: 33.3333333333333333%
+}
+
+.profile-card .profile-social-links li a{
+  display: block;
+  text-align: center;
+  padding: 30px auto;
+  margin: 0 20px;
+  border-radius: 100%;
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+
+.profile-card .profile-social-links li a:hover{
+  box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+}
+
+.profile-card .profile-social-links li a:active{
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+.profile-card .profile-social-links li a img{
+  width: 100%;
+  display: block;
+}
+
+.buttonarrow
+{
+text-decoration: none;
+border: none;
+width: 100%;
+height: 20px;
+margin-top: 20px;
+background-color: transparent !important;
+color: grey;
+}
+
+@media screen and (max-width: 1000px) {
+.profile-card{
+  width: 38vw !important;
+}
+.profile-card header img{
+  margin-left: 20%;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+.profile-card{
+  width: 80vw !important;
+}
+}  

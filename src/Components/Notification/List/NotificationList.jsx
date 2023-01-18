@@ -14,22 +14,23 @@ const NotificationList = () => {
       <NotificationItem />
       <NotificationItem />
       <div className="notificationBtnContainer">
-        {/* <Button btnText="View them all" /> */}
-        <Popup
+        <Button btnText="View them all" />
+        {/* <Popup
           trigger={
             <button
               // style={{ width: { btnWidth }, height: { btnHeight } }}
               className="btnContainer"
             >
-              {/* <span className="btnTextSymbol"> {symbol} </span>{" "} */}
               <span> View them all </span>
             </button>
           }
           position="right"
         >
-          <TimeLine />
-        </Popup>
+        </Popup> */}
       </div>
+      {/* <div className="notificationPopupContainer"> */}
+      {/* <TimeLine /> */}
+      {/* </div> */}
     </div>
   );
 };

@@ -10,18 +10,20 @@ const HomePage = () => {
           <h3 className="festTheme"> PRISM OF POSSIBILITIES </h3>
           <div className="presentedBy">
             <div>Presented By:</div>
-            <div><span className="presenterLogo">
-              {" "}
-              <img className="presenter" src="/assets/do.svg" />{" "}
-            </span>
-            <span className="presenterLogo">
-              {" "}
-              <img className="presenter" src="/assets/appwrite.svg" />{" "}
-            </span>
-            <span className="presenterLogo">
-              {" "}
-              <img className="presenter" src="/assets/docker.svg" />{" "}
-            </span></div>
+            <div>
+              <span className="presenterLogo">
+                {" "}
+                <img className="presenter" src="/assets/do.svg" />{" "}
+              </span>
+              <span className="presenterLogo">
+                {" "}
+                <img className="presenter" src="/assets/appwrite.svg" />{" "}
+              </span>
+              <span className="presenterLogo">
+                {" "}
+                <img className="presenter" src="/assets/docker.svg" />{" "}
+              </span>
+            </div>
           </div>
           <NotificationList />
         </div>
