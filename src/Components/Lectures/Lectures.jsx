@@ -98,6 +98,7 @@ const Lecture = () => {
 
           {/* </Carousel> */}
         </div>
+        <span id="aboutElementHelper"></span>
       </div>
     </>
   );
