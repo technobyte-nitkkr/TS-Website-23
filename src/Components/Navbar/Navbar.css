@@ -133,7 +133,7 @@
 
 @media (max-width:900px) {
     .logoLink {
-        width: 70%;
+        width: 200%;
     }
     
     .toggle-button {
@@ -154,13 +154,13 @@
         visibility: hidden;
         /* display: none; */
         width: 100%;
-        margin-top: 200px;        
+        margin-top: 38%;     
     }
 
     .navMenus {
         background-color: #555;
         opacity: 80%;
-        height: 700px;
+        height: 650px;
     }
 
     .Buttonclose{
@@ -180,6 +180,7 @@
     }
     .navbar-links ul li {
         text-align: center;
+        height: 10%;
     }
 
     .navbar-links ul li a {
@@ -190,14 +191,19 @@
         display: flex;
     }
 
+    .Button1{
+        margin-right: 20%;
+        margin-bottom: 20%;
+    }
     .ts-logo {
-        width: 100%;
+        width: max-content;
+        height: 80%;
     }
 
     .nav {
         height: 75px;
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }

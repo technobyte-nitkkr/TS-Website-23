@@ -8,9 +8,11 @@ export default function Navbar() {
   return (
     <nav className="nav">
       {/* <div> */}
+      <div className="logo-div">
       <Link to="/" className="logoLink">
         <img src={logo} alt="Techspardha" className="ts-logo" />
       </Link>
+      </div>
       <div
         href="#"
         class="toggle-button"
