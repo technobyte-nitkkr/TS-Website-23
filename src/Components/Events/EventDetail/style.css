@@ -9,6 +9,7 @@
     height: 100%;
     display: grid;
     grid-template-rows: 50% 50%;
+    overflow-y: overlay;
 }
 
 .events{
@@ -40,6 +41,7 @@
     background-color: #0D1117;
     height: calc(100% - 60px);
     padding: 20px;
+    overflow-y: scroll;
 }
 
 .event-indivi{
@@ -105,4 +107,21 @@
     font-family: "JetBrainsMono";
     font-size: 25px;
     padding-top: 10px;
+}
+
+@media (orientation: portrait) {
+    .event-container{
+        grid-template-rows: 25% 75%;
+        grid-auto-flow: column;
+        grid-template-columns: 100%;
+    }
+    .event-terminal-container{
+        display: none;
+    }
+    .event-list{
+        grid-template-rows: 100%;
+    }
+    .event-list-cont{
+        height: 100%;
+    }
 }

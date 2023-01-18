@@ -3,10 +3,10 @@ import Modal from '../../Modal/Modal'
 import Terminal from '../../Terminal/Terminal'
 import "./style.css"
 
-export default function Event() {
-    const [events, setEvents] = useState(["AXIOM", "TOMCAT", "AXIOM"])
+export default function Event({onClickOutside, show}) {
+    const [events, setEvents] = useState(["AXIOM", "TOMCAT", "AXIOM","TOMCAT", "TOMCAT", "AXIOM","TOMCAT", "TOMCAT", "AXIOM","TOMCAT"])
     return (
-        <Modal element={<EventDesc events={events} event="TOMCAT" image="/assets/event/dummy.png"/>} />
+        <Modal element={<EventDesc events={events} event="TOMCAT" image="/assets/event/dummy.png"/>} show={show} onClickOutside={onClickOutside}/>
     )
 }
 
@@ -21,12 +21,14 @@ const EventDesc = ({events, event, image})=>{
                     <div className='event-list-cont'>
                         {
                             events.map((e, ind)=>{
-                                return <div className={`event-indivi ${event === e?"event-indivi-active":""}`}>{ind + 1} <div>{e}</div></div>
+                                return <div className={`event-indivi ${event === e?"event-indivi-active":""}`}>{ind<9?"0":""}{ind + 1} <div>{e}</div></div>
                             })
                         }
                     </div>
                 </div>
-                <Terminal />
+                <div className='event-terminal-container'>
+                    <Terminal />
+                </div>
             </div>
             <div className="event-description">
                 <div className="event-top event-name">

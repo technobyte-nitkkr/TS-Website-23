@@ -8,11 +8,12 @@ export default function Modal({
   menuItems,
   onMenuClick,
   onClickOutside,
+  show
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <div>
-      {/* <div className="modal-cover" onClick={onClickOutside}></div> */}
+  return show && (
+    <div className="modal-superContainer">
+      <div className="modal-cover" onClick={onClickOutside}></div>
       <div className="modal-container">
         <div className="modal-top">
           <div className="tag">

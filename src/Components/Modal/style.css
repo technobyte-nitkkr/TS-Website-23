@@ -1,10 +1,17 @@
+.modal-superContainer{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
 .modal-cover{
     width: 100vw;
     height: 100vh;
-    /* position: absolute; */
+    position: absolute;
     top: 0px;
     left: 0px;  
-    background-color: rgba(0, 0, 0, 0.185);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 
 .modal-container{
@@ -47,7 +54,7 @@
 }
 
 .modal-menu-items{
-    /* position: absolute; */
+    position: absolute;
     top: 0px;
     left: 100%;
     color: white;
@@ -80,8 +87,13 @@
     font-size: 14px;
 }
 
+
 .modal-search-container div{
     margin: 0px 30px;
+}
+
+.modal-search-container div::-webkit-scrollbar{
+    display: none;
 }
 
 .modal-search-img{

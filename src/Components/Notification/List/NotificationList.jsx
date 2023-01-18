@@ -29,9 +29,9 @@ const NotificationList = () => {
       >
         <Button btnText="View them all" />
       </div>
-      <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-        <TimeLine />
-      </Overlay>
+      {/* <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}> */}
+        <TimeLine show={isOpen} onClickOutside={closeOverlay}/>
+      {/* </Overlay> */}
     </div>
   );
 };

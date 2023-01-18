@@ -88,9 +88,9 @@ const EventCarousel = () => {
       >
         <Button btnText="View them all" />
       </div>
-      <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-        <Event />
-      </Overlay>
+      {/* <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}> */}
+      <Event show={isOpen} onClickOutside={closeOverlay}/>
+      {/* </Overlay> */}
     </div>
   );
 };
