@@ -28,6 +28,7 @@ export default function Registration() {
         <Button btnText="Download the official app now" symbol={"▶️"} />
       </div> */}
       {/* </form> */}
+      <div className="dwnBtn"><Button btnText={'Download'}/></div>
     </div>
   );
 }

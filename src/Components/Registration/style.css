@@ -2,10 +2,11 @@
     margin-right: 50px;
 }
 .reg-container h2{
+    font-family: 'segoeui';
     font-size: 35px;
 }
-
 .reg-container p{
+    font-family: 'segoeui';
     margin: 20px 0px;
 }
 
@@ -33,6 +34,10 @@
 .reg-mobile{
     display: flex;
     width: 100%;
+}
+
+.dwnBtn{
+    width: 20%;
 }
 
 @media only screen and (max-width: 700px) {
