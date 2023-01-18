@@ -35,16 +35,22 @@ export default function Navbar() {
             </div>
           </li>
           <li className="navbarItem">
-            <a href="/events">EVENTS</a>
+            <Link to={{ pathname: "/", hash: "#events" }}>
+              <a href="/events">EVENTS</a>
+            </Link>
           </li>
           <li className="navbarItem">
-            <a href="/sponsors">SPONSORS</a>
+            <Link to={{ pathname: "/", hash: "#sponsors" }}>
+              <a href="/sponsors">SPONSORS</a>
+            </Link>
           </li>
           <li className="navbarItem">
             <a href="/lectures">LECTURES</a>
           </li>
           <li className="navbarItem">
-            <a href="/about">ABOUT</a>
+            <Link to={{ pathname: "/", hash: "#about" }}>
+              <a href="/about">ABOUT</a>
+            </Link>
           </li>
           <li className="navbarItem">
             <Link to="/team">

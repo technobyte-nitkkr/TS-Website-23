@@ -4,7 +4,7 @@ import "./Sponsors.css";
 
 const Sponsors = () => {
   return (
-    <div className="sponsorsElementContainer">
+    <div id="sponsorElement" className="sponsorsElementContainer">
       <div className="sponsorCarouselContainer">
         <div className="sponsorIcon">
           {" "}

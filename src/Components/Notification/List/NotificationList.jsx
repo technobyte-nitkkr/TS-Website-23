@@ -7,7 +7,7 @@ import TimeLine from "../../Timeline/TimeLine";
 
 const NotificationList = () => {
   return (
-    <div className="notificationContainer">
+    <div id="sponsorElementHelper" className="notificationContainer">
       <NotificationItem />
       <NotificationItem />
       <NotificationItem />
