@@ -6,7 +6,10 @@ const Button = ({ symbol, btnText, btnWidth, btnHeight }) => {
       // style={{ width: { btnWidth }, height: { btnHeight } }}
       className="btnContainer"
     >
-      <span className="btnTextSymbol"> {symbol} </span> <span> {btnText} </span>
+      <div style={{ marginTop: "10px" }}>
+        <span className="btnTextSymbol"> {symbol} </span>{" "}
+        <span> {btnText} </span>
+      </div>
     </button>
   );
 };

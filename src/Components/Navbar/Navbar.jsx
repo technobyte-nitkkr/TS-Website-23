@@ -7,37 +7,61 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="nav">
-      {/* <div className="logosContainer"> */}
-      {/* <img src={TSlogo} alt="TSLogo" className="ts-logo-icon" /> */}
-      <img src={logo} alt="Techspardha" className="ts-logo" />
-      {/* </div> */}
-      <ul className="navMenus">
-        <li className="navbarItem">
-          <a href="/events">EVENTS</a>
-        </li>
-        <li className="navbarItem">
-          <a href="/sponsors">SPONSORS</a>
-        </li>
-        <li className="navbarItem">
-          <a href="/lectures">LECTURES</a>
-        </li>
-        <li className="navbarItem">
-          <a href="/about">ABOUT</a>
-        </li>
-        <Link to="/team">
-          <li className="navbarItem">
-            <a href="">TEAM</a>
+      {/* <div> */}
+      <Link to="/" className="logoLink">
+        <img src={logo} alt="Techspardha" className="ts-logo" />
+      </Link>
+      <div
+        href="#"
+        class="toggle-button"
+        onClick={() => {
+          document.getElementById("toToggle").style.visibility = "visible";
+        }}
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div className="navbar-links" id="toToggle">
+        <ul className="navMenus">
+          <li className="navbarItem Buttonclose">
+            <div
+              href="#"
+              onClick={() => {
+                document.getElementById("toToggle").style.visibility = "hidden";
+              }}
+            >
+              Close X
+            </div>
           </li>
-        </Link>
-        <li className="navbarItem">
-          <Button
-            symbol={"▶️"}
-            btnText={"Login"}
-            btnHeight="100%"
-            btnWidth={"100%"}
-          />
-        </li>
-      </ul>
+          <li className="navbarItem">
+            <a href="/events">EVENTS</a>
+          </li>
+          <li className="navbarItem">
+            <a href="/sponsors">SPONSORS</a>
+          </li>
+          <li className="navbarItem">
+            <a href="/lectures">LECTURES</a>
+          </li>
+          <li className="navbarItem">
+            <a href="/about">ABOUT</a>
+          </li>
+          <li className="navbarItem">
+            <Link to="/team">
+              <a href="">TEAM</a>
+            </Link>
+          </li>
+          <li className="navbarItem Button1">
+            <Button
+              symbol={"▶️"}
+              btnText={"Login"}
+              btnHeight="100%"
+              btnWidth={"100%"}
+            />
+          </li>
+        </ul>
+      </div>
+      {/* </div> */}
     </nav>
   );
 }
