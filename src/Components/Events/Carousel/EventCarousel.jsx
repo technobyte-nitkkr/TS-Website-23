@@ -7,6 +7,11 @@ import Button from "../../Button/Button";
 import Overlay from "react-overlay-component";
 
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 const EventCarousel = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,25 +22,53 @@ const EventCarousel = () => {
   };
 
   return (
-    <div id="eventElement">
-      <div className="carouselCardContainer">
-        <EventCard
-          eventImage={papyrusVitaeEventImage}
-          eventTitle="Papyrus Vitae"
-        />
-        <EventCard
-          eventImage={programmingEventImage}
-          eventTitle="Programming"
-        />
-        <EventCard
-          eventImage={papyrusVitaeEventImage}
-          eventTitle="Papyrus Vitae"
-        />
-        <EventCard
-          eventImage={programmingEventImage}
-          eventTitle="Programming"
-        />
-      </div>
+    <div>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={100}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={{
+          nextEl: ".image-swiper-button-next",
+          prevEl: ".image-swiper-button-prev",
+          disabledClass: "swiper-button-disabled",
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <div className="carouselCardContainer">
+          <SwiperSlide>
+            <EventCard
+              eventImage={papyrusVitaeEventImage}
+              eventTitle="Papyrus Vitae"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <EventCard
+              eventImage={programmingEventImage}
+              eventTitle="Programming"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <EventCard
+              eventImage={papyrusVitaeEventImage}
+              eventTitle="Papyrus Vitae"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <EventCard
+              eventImage={programmingEventImage}
+              eventTitle="Programming"
+            />
+          </SwiperSlide>
+        </div>
+      </Swiper>
       <div
         className="buttonContainer"
         id="glHelper"
