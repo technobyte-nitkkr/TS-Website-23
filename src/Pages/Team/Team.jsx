@@ -1,5 +1,5 @@
-import TeamAnimation from "../Components/Team-Tech/Animation/TeamAnimation";
-import TeamDetails from "../Components/Team-Tech/Details/TeamDetails";
+import TeamAnimation from "../../Components/Team-Tech/Animation/TeamAnimation";
+import TeamDetails from "../../Components/Team-Tech/Details/TeamDetails";
 import "./Team.css";
 
 export default function Team() {

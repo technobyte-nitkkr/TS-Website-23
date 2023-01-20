@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import EventCarousel from "../Components/Events/Carousel/EventCarousel";
-import Homecontainer from "../Components/Homecontainer/Homecontainer";
-import HomePage from "../Components/HomePage/HomePage";
-import Lecture from "../Components/Lectures/Lectures";
-import Registration from "../Components/Registration/Registration";
-import Sponsors from "../Components/Sponsors/Sponsors";
-import TestimonialCarousel from "../Components/Testimonial/Carousel/TestimonialCarousel";
-import TimeLine from "../Components/Timeline/TimeLine";
+import EventCarousel from "../../Components/Events/Carousel/EventCarousel";
+import Homecontainer from "../../Components/Homecontainer/Homecontainer";
+import HomePage from "../../Components/HomePage/HomePage";
+import Lecture from "../../Components/Lectures/Lectures";
+import Registration from "../../Components/Registration/Registration";
+import Sponsors from "../../Components/Sponsors/Sponsors";
+import TestimonialCarousel from "../../Components/Testimonial/Carousel/TestimonialCarousel";
+import TimeLine from "../../Components/Timeline/TimeLine";
 import "./Home.css";
 
 const Home = (props) => {

@@ -1,17 +1,13 @@
 import "./App.css";
 import image from "/assets/Main-background.svg";
 import Navbar from "./Components/Navbar/Navbar";
-import Homecontainer from "./Components/Homecontainer/Homecontainer";
 import Footer from "./Components/Footer/Footer";
-import Sponsors from "./Components/Sponsors/Sponsors";
-import TestimonialCarousel from "./Components/Testimonial/Carousel/TestimonialCarousel";
-import EventCarousel from "./Components/Events/Carousel/EventCarousel";
-import TimeLine from "./Components/Timeline/TimeLine";
-import Registration from "./Components/Registration/Registration";
-import Team from "./Pages/Team";
+import Team from "./Pages/Team/Team";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 import "swiper/css/bundle";
+import About from "./Pages/About/About";
+
 function App() {
   return (
     <div
@@ -35,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/about" element={<About />} />
           </Routes>
           <div>
             <Footer />
