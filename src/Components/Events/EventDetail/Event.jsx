@@ -1,15 +1,53 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { useRef } from "react";
 import { useEffect } from "react";
 import Modal from "../../Modal/Modal";
 import Terminal from "../../Terminal/Terminal";
 import "./style.css";
 
-export default function Event({ onClickOutside, show, elements }) {
-  const [events, setEvents] = useState({ AXIOM: "", TOMCAT: "" });
+export default function Event({ onClickOutside, show }) {
+  const [events, setEvents] = useState({});
+  const [categoryWiseEvents, setCategoryWiseEvents] = useState({});
+  const [event, setEvent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  const [currentCategory, setCurrentCategory] = useState("Astronomy");
+
+  const onCategorySelect = (category) => {
+    axios
+      .get("/events/description", {
+        params: { eventCategory: category },
+      })
+      .then((res) => {
+        const categoryEvents = res.data.data.events;
+        let eventData = {};
+
+        categoryEvents.forEach((event) => {
+          eventData[event.eventName] = event;
+        });
+
+        setEvents(eventData);
+        setEvent(Object.keys(eventData)[0]);
+      });
+  };
+
   useEffect(() => {
-    setIsLoading(false);
+    axios.get("/events").then((res) => {
+      const eventData = res.data.data.events;
+      let categories = {};
+
+      eventData.forEach((event) => {
+        if (!categories[event.eventCategory])
+          categories[event.eventCategory] = [event.eventName];
+        else categories[event.eventCategory].push(event.eventName);
+      });
+
+      setCategoryWiseEvents(categories);
+      setCurrentCategory(Object.keys(categories)[0]);
+      onCategorySelect(currentCategory);
+      setIsLoading(false);
+    });
   }, []);
 
   return (
@@ -21,11 +59,13 @@ export default function Event({ onClickOutside, show, elements }) {
           element={
             <EventDesc
               events={Object.keys(events)}
-              event="YASH"
-              image="/assets/event/dummy.png"
+              //   event={Object.keys(events)[0]}
+              event={event}
+              eventsData={events}
             />
           }
-          //   menuItems={["TOMCAT", "AXIOM"]}
+          menuItems={Object.keys(categoryWiseEvents)}
+          onMenuClick={onCategorySelect}
           show={show}
           onClickOutside={onClickOutside}
         />
@@ -34,7 +74,11 @@ export default function Event({ onClickOutside, show, elements }) {
   );
 }
 
-const EventDesc = ({ events, event, image }) => {
+const EventDesc = ({ events, event, eventsData }) => {
+  const [currentEvent, setCurrentEvent] = useState(event);
+
+  useEffect(() => {}, [event, events, eventsData]);
+
   return (
     <div className="event-container">
       <div className="event-list">
@@ -47,8 +91,9 @@ const EventDesc = ({ events, event, image }) => {
               return (
                 <div
                   className={`event-indivi ${
-                    event === e ? "event-indivi-active" : ""
+                    currentEvent === e ? "event-indivi-active" : ""
                   }`}
+                  onClick={() => setCurrentEvent(e)}
                 >
                   {ind < 9 ? "0" : ""}
                   {ind + 1} <div>{e}</div>
@@ -68,27 +113,9 @@ const EventDesc = ({ events, event, image }) => {
           <img src="/assets/event/notification.svg" alt="" />
         </div>
         <div className="event-details">
-          <div className="event-heading">{event}</div>
-          <img src={image} alt="" />
-          <div>
-            Techspardha is the annual techno-managerial festival of National
-            Institute of Technology, Kurukshetra. It started in 1995 as
-            "Technospect" (later changed to Literati). The year 2013 marked the
-            Golden Jubilee of NIT Kurukshetra, thus it was renamed as
-            Techspardha. Etymologically, the word ‘Techspardha’ is composed of
-            two words, ‘Tech’ in English is a contraction of technology and
-            ‘Spardha’ in Hindi means competition. Techspardha is known for
-            hosting a variety of events that include competitions, exhibitions,
-            guest lectures as well as workshops. Techspardha is the annual
-            techno-managerial festival of National Institute of Technology,
-            Kurukshetra. It started in 1995 as "Technospect" (later changed to
-            Literati). The year 2013 marked the Golden Jubilee of NIT
-            Kurukshetra, thus it was renamed as Techspardha. Etymologically, the
-            word ‘Techspardha’ is composed of two words, ‘Tech’ in English is a
-            contraction of technology and ‘Spardha’ in Hindi means competition.
-            Techspardha is known for hosting a variety of events that include
-            competitions, exhibitions, guest lectures as well as workshops.
-          </div>
+          <div className="event-heading">{currentEvent}</div>
+          <img src={eventsData[currentEvent]?.poster} alt="" />
+          <div>{eventsData[currentEvent]?.description}</div>
         </div>
       </div>
     </div>

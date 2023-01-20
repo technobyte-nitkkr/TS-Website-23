@@ -24,17 +24,17 @@ const EventCarousel = () => {
   return (
     <div>
       <Swiper
-      breakpoints={{
-        576: {
-          width: 576,
-          slidesPerView: 1,
-        },
-        768: {
-          width: 768,
-          slidesPerView: 2,
-          spaceBetween:100,
-        },
-      }}
+        breakpoints={{
+          576: {
+            width: 576,
+            slidesPerView: 1,
+          },
+          768: {
+            width: 768,
+            slidesPerView: 2,
+            spaceBetween: 100,
+          },
+        }}
         spaceBetween={100}
         centeredSlides={true}
         autoplay={{
@@ -89,7 +89,7 @@ const EventCarousel = () => {
         <Button btnText="View them all" />
       </div>
       {/* <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}> */}
-      <Event show={isOpen} onClickOutside={closeOverlay}/>
+      <Event show={isOpen} onClickOutside={closeOverlay} />
       {/* </Overlay> */}
     </div>
   );
