@@ -1,26 +1,33 @@
+import { useState, useEffect } from "react";
 import "./NotificationList.css";
 import NotificationItem from "../Item/NotificationItem";
 import Button from "../../Button/Button";
-// import Popup from "reactjs-popup";
 import TimeLine from "../../Timeline/TimeLine";
-// import "reactjs-popup/dist/index.css";
-import Overlay from "react-overlay-component";
-import { useState } from "react";
+import axios from "axios";
+import Event from "../../Events/EventDetail/Event";
 
 const NotificationList = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [notifs, setNotifs] = useState([]);
   const closeOverlay = () => setIsOpen(false);
-  const configs = {
-    animate: true,
-  };
+
+  useEffect(() => {
+    axios.get("/notification").then((res) => {
+      const notifications = res.data.data.notifications;
+      console.log(notifications);
+      setNotifs(notifications);
+    });
+  }, []);
+
   return (
     <div id="sponsorElementHelper" className="notificationContainer">
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
-      <NotificationItem />
+      {notifs.map((notif) => (
+        <NotificationItem
+          title={notif.notification.title}
+          content={notif.notification.description}
+        />
+      ))}
+
       <div
         className="notificationBtnContainer"
         onClick={() => {
@@ -29,9 +36,7 @@ const NotificationList = () => {
       >
         <Button btnText="View them all" />
       </div>
-      {/* <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}> */}
-        <TimeLine show={isOpen} onClickOutside={closeOverlay}/>
-      {/* </Overlay> */}
+      <Event show={isOpen} onClickOutside={closeOverlay} />
     </div>
   );
 };

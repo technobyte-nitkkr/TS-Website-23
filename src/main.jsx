@@ -4,6 +4,11 @@ import App from "./App";
 import "./index.css";
 import "swiper/css/bundle";
 
+import axios from "axios";
+
+axios.defaults.baseURL =
+  "https://us-central1-techspardha-87928.cloudfunctions.net/api2";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />

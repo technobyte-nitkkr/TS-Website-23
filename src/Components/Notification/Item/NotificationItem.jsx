@@ -1,9 +1,12 @@
 import "./NotificationItem.css";
 
-const NotificationItem = () => {
+const NotificationItem = ({ title, content }) => {
   return (
     <div className="notificationItemContainer">
-      <p className="notificationItem"> {">>"} 24th - 28th FEBRUARY </p>
+      <p className="notificationItem">
+        {" "}
+        {">>"} {title}{" "}
+      </p>
     </div>
   );
 };

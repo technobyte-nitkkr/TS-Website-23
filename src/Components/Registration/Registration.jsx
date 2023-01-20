@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./style.css";
 
@@ -29,7 +30,9 @@ export default function Registration() {
       </div> */}
       {/* </form> */}
       <div className="dwnBtn">
-        <Button btnText={"Know more"} />
+        <Link to="/about">
+          <Button btnText={"Know more"} />
+        </Link>
       </div>
     </div>
   );
