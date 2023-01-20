@@ -18,7 +18,6 @@ export default function TeamDetails() {
           "https://us-central1-techspardha-87928.cloudfunctions.net/api2/contacts"
         );
         setData(await res.data.data.contacts.reverse());
-        console.log(res.data.data.contacts);
         setPeople(res.data.data.contacts[0].people);
         setCurrent(res.data.data.contacts[0].section);
       } catch (err) {
@@ -30,9 +29,7 @@ export default function TeamDetails() {
 
   const changePeople = async (e) => {
     try {
-      // console.log(e.target.id);
       setCurrent(e.target.id);
-      console.log(current);
       for (var i = 0; i < data.length; i++) {
         if (data[i].section === e.target.id) {
           setIsLoading(true);
@@ -40,7 +37,6 @@ export default function TeamDetails() {
           setTimeout(() => {
             setIsLoading(false);
           }, 500);
-          // console.log(data[i].people);
         }
       }
     } catch (err) {

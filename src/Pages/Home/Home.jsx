@@ -14,7 +14,6 @@ const Home = (props) => {
   const { hash, key } = useLocation();
   useEffect(() => {
     if (hash) {
-      console.log("hash: ", hash);
       switch (hash) {
         case "#sponsors":
           document
@@ -32,7 +31,6 @@ const Home = (props) => {
             ?.scrollIntoView({ behavior: "smooth" });
           break;
         case "#lectures":
-          console.log("here");
           document
             .getElementById("glHelper")
             ?.scrollIntoView({ behavior: "smooth" });

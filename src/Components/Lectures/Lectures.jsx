@@ -46,7 +46,6 @@ const Lecture = () => {
       .then((res) => res.json())
       .then((data) => {
         lectures = data.data.lectures;
-        console.log(lectures);
         SetGuestList(data.data.lectures);
       })
       .catch((err) => {
@@ -108,11 +107,7 @@ const Lecture = () => {
                         <div
                           className="buttonarrow"
                           onClick={() => {
-                            console.log("hello");
-
                             setExpanded(index + 1);
-
-                            console.log(expanded);
                           }}
                         >
                           Show More
@@ -123,8 +118,6 @@ const Lecture = () => {
                           className="buttonarrow"
                           onClick={() => {
                             setExpanded(0);
-
-                            console.log(expanded);
                           }}
                         >
                           Show Less
@@ -173,11 +166,7 @@ const Lecture = () => {
                       <div
                         className="buttonarrow"
                         onClick={() => {
-                          console.log("hello");
-
                           setExpanded(index + 1);
-
-                          console.log(expanded);
                         }}
                       >
                         Show More
@@ -188,8 +177,6 @@ const Lecture = () => {
                         className="buttonarrow"
                         onClick={() => {
                           setExpanded(0);
-
-                          console.log(expanded);
                         }}
                       >
                         Show Less
