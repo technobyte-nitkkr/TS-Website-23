@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import Modal from "../../Modal/Modal";
+import NotificationItem from "../../Notification/Item/NotificationItem";
 import Terminal from "../../Terminal/Terminal";
 import "./style.css";
 
@@ -103,7 +104,41 @@ const EventDesc = ({ events, event, eventsData }) => {
           </div>
         </div>
         <div className="event-terminal-container">
-          <Terminal />
+          <Terminal
+            element={
+              <div style={{ fontFamily: "JetBrainsMono" }}>
+                <p>
+                  {">>"} venue: {eventsData[currentEvent]?.venue}{" "}
+                </p>
+                <p>
+                  {">>"} Start Time:{" "}
+                  {new Date(eventsData[currentEvent]?.startTime).toDateString()}{" "}
+                </p>
+                <p>
+                  {">>"} Start Time:{" "}
+                  {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
+                </p>
+                <p>
+                  {">>"} Start Time:{" "}
+                  {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
+                </p>
+                <p>
+                  <a href={eventsData[currentEvent]?.document}>
+                    {">>"} <u> Registration link </u>
+                  </a>
+                </p>
+                <p>
+                  {">>"} Rules: <br />
+                  {eventsData[currentEvent]?.rules.map((rule) => (
+                    <span>
+                      {" "}
+                      {">>"} {rule} <br />{" "}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            }
+          />
         </div>
       </div>
       <div className="event-description">
