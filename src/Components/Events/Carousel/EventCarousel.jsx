@@ -35,7 +35,7 @@ const EventCarousel = () => {
             spaceBetween: 100,
           },
         }}
-        spaceBetween={100}
+        spaceBetween={300}
         centeredSlides={true}
         autoplay={{
           delay: 1000,
