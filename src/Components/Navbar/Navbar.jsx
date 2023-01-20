@@ -3,8 +3,17 @@ import "./Navbar.css";
 import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import { useGoogleOneTapLogin } from "@react-oauth/google";
 
 export default function Navbar() {
+  useGoogleOneTapLogin({
+    onSuccess: (credentialResponse) => {
+      console.log(credentialResponse);
+    },
+    onError: () => {
+      console.log("Login Failed");
+    },
+  });
   return (
     <nav className="nav">
       <Link to="/" className="logoLink">
