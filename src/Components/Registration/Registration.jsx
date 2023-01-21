@@ -19,9 +19,11 @@ export default function Registration({ showBtn }) {
       </p>
       {showBtn ? (
         <div className="dwnBtn">
-          <Link to="/about">
+          {/* <Link to="/about"> */}
+          <a href="/about">
             <Button btnText={"Know more"} />
-          </Link>
+          </a>
+          {/* </Link> */}
         </div>
       ) : (
         <></>

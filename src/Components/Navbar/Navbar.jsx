@@ -63,9 +63,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navbarItem">
-            <Link to="/team">
+            <a href="/team">
               <span>TEAM</span>
-            </Link>
+            </a>
           </li>
           <li className="navbarItem Button1">
             <Button
