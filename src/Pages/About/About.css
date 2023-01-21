@@ -2,3 +2,7 @@
   margin-top: 12rem;
   margin-left: 3rem;
 }
+.buttons {
+  width: fit-content;
+  margin: auto;
+}
