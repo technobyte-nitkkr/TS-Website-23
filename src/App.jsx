@@ -14,10 +14,11 @@ import "swiper/css/bundle";
 import About from "./Pages/About/About";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { useEffect } from "react";
-
+// import Keys from "./config.keys";
+const GCIDKeys = import.meta.env.VITE_GCID
 function App() {
   return (
-    <GoogleOAuthProvider clientId="<your_client_id>">
+    <GoogleOAuthProvider clientId= {GCIDKeys}>
       <div
         className="App"
         style={{

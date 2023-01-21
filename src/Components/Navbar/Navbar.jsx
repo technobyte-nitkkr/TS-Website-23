@@ -7,8 +7,27 @@ import { useGoogleOneTapLogin } from "@react-oauth/google";
 
 export default function Navbar() {
   useGoogleOneTapLogin({
-    onSuccess: (credentialResponse) => {
+    onSuccess: async (credentialResponse) => {
+      //  get token id
       console.log(credentialResponse);
+      const TOKEN = credentialResponse.credential;
+      
+      if (localStorage.getItem("ts20token")) {
+        const data = JSON.parse(localStorage.getItem("userdata"));
+        const token = localStorage.getItem("ts20token");
+        return;
+      }
+
+      try {
+        const response = await request.post("/login", {
+          idToken: TOKEN,
+        });
+
+        console.log("HERE");
+        console.log(response.data.token);
+      } catch (error) {
+        console.log(error);
+      }
     },
     onError: () => {
       console.log("Login Failed");
