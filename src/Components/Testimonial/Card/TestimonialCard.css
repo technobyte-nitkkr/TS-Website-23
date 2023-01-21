@@ -24,6 +24,7 @@
   background-color: #ffffff;
   color: #000;
   transition: all 0.5s;
+  min-height: 310px;
 }
 
 .testimonialCardContainer:hover .testimonicalCardContent{  
@@ -51,7 +52,7 @@
   line-height: 63px;
 }
 
-.personDesignation {
+.personBranch {
   font-weight: 500;
   font-size: 16px;
 }
@@ -71,7 +72,7 @@
   .testimonialCardPersonName{
     font-size: 14px;
   }
-  .personDesignation{
+  .personBranch{
     font-size: 12px;
   }
   .testimonialCardPersonAvatar{
