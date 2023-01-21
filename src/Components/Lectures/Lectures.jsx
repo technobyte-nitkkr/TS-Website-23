@@ -47,6 +47,7 @@ const Lecture = () => {
       .then((data) => {
         lectures = data.data.lectures;
         SetGuestList(data.data.lectures);
+        console.log(lectures);
       })
       .catch((err) => {
         console.log(err);
@@ -125,17 +126,17 @@ const Lecture = () => {
                       )}
                       <ul class="profile-social-links">
                         <li>
-                          <a href="">
+                          <a href={item?.insta}>
                             <FaInstagram className="faSocial" />
                           </a>
                         </li>
                         <li>
-                          <a href="">
+                          <a href={item?.linkedin}>
                             <FaLinkedin className="faSocial" />
                           </a>
                         </li>
                         <li>
-                          <a href="">
+                          <a href={item?.facebook}>
                             <FaFacebook className="faSocial" />
                           </a>
                         </li>
@@ -184,17 +185,17 @@ const Lecture = () => {
                     )}
                     <ul class="profile-social-links">
                       <li>
-                        <a href="">
+                        <a href={item?.insta}>
                           <FaInstagram className="faSocial" />
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href={item?.linkedin}>
                           <FaLinkedin className="faSocial" />
                         </a>
                       </li>
                       <li>
-                        <a href="">
+                        <a href={item?.facebook}>
                           <FaFacebook className="faSocial" />
                         </a>
                       </li>
