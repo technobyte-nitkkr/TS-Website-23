@@ -3,11 +3,17 @@ import image from "/assets/Main-background.svg";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Team from "./Pages/Team/Team";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import "swiper/css/bundle";
 import About from "./Pages/About/About";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { useEffect } from "react";
 
 function App() {
   return (

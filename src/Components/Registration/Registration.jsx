@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./style.css";
 
-export default function Registration() {
+export default function Registration({ showBtn }) {
   return (
     <div className="reg-container">
       <h2>What is Techspardha 2023?</h2>
@@ -17,23 +17,15 @@ export default function Registration() {
         competition. Techspardha is known for hosting a variety of events that
         include competitions, exhibitions, guest lectures as well as workshops.
       </p>
-      {/* <form>
-                <input type="text" name="username"  placeholder='Name*' required={true} className="reg-input"/>
-                <input type="email" name="email"  placeholder='Email*' required={true} className="reg-input"/>
-                <input type="text" name='current_city' placeholder='Current City*' required={true} className="reg-input"/>
-                <div className='reg-mobile'>
-                    <input type="text" name='country_code' defaultValue={"+91"} className="reg-input reg-countrycode"/> <input type="text" name='phone' placeholder='Whatsapp moblie number*' required={true} className="reg-input"/>
-                </div>
-                <textarea name="about_you" className="reg-input reg-textarea" placeholder='What qualities do you possess?'></textarea> */}
-      {/* <div className="buttonContainer">
-        <Button btnText="Download the official app now" symbol={"▶️"} />
-      </div> */}
-      {/* </form> */}
-      <div className="dwnBtn">
-        <Link to="/about">
-          <Button btnText={"Know more"} />
-        </Link>
-      </div>
+      {showBtn ? (
+        <div className="dwnBtn">
+          <Link to="/about">
+            <Button btnText={"Know more"} />
+          </Link>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

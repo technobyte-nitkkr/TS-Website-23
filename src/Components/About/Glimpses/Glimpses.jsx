@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 import "./Glimpses.css";
 
 import img1 from "/assets/about_carousal/1.jpg";
@@ -24,6 +26,7 @@ const Glimpses = () => {
           },
         }}
         spaceBetween={100}
+        slideClass="swiper-slide"
         centeredSlides={true}
         autoplay={{
           delay: 1000,
@@ -43,7 +46,12 @@ const Glimpses = () => {
         <div className="carouselCardContainer">
           <SwiperSlide>
             <div className="wrapper">
-              <img className="d-block  aboutimg" alt="" src={img1} style={{width: "100%"}} />
+              <img
+                className="d-block  aboutimg"
+                alt=""
+                src={img1}
+                style={{ width: "100%" }}
+              />
             </div>
           </SwiperSlide>
           <SwiperSlide>

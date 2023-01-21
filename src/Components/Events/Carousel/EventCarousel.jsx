@@ -31,11 +31,12 @@ const EventCarousel = () => {
           768: {
             width: 768,
             slidesPerView: 2,
-            spaceBetween: 100,
+            spaceBetween: 20,
           },
         }}
         spaceBetween={3000}
         centeredSlides={true}
+        slideWidhth
         autoplay={{
           delay: 1000,
           disableOnInteraction: false,

@@ -46,7 +46,10 @@ const Home = (props) => {
       <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
       <Homecontainer heading={"Event Categories"} element={<EventCarousel />} />
       <Homecontainer heading={"Guest Lectures"} element={<Lecture />} />
-      <Homecontainer heading={"About Techspardha"} element={<Registration />} />
+      <Homecontainer
+        heading={"About Techspardha"}
+        element={<Registration showBtn={true} />}
+      />
       <Homecontainer
         heading={"Testimonials"}
         element={<TestimonialCarousel />}

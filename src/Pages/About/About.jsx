@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Glimpses from "../../Components/About/Glimpses/Glimpses";
 import InstallApp from "../../Components/About/InstallApp/InstallApp";
 import Homecontainer from "../../Components/Homecontainer/Homecontainer";
@@ -5,8 +6,12 @@ import Registration from "../../Components/Registration/Registration";
 import "./About.css";
 
 const About = () => {
+  useEffect(() => {
+    document.getElementById("homePageTop")?.scrollBy(0, screenY); // scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
-    <div className="aboutPageContainer">
+    <div className="aboutPageContainer" id="homePageTop">
       <Homecontainer heading={"About Techspardha"} element={<Registration />} />
       <Homecontainer
         heading={"Install the Techspardha app"}

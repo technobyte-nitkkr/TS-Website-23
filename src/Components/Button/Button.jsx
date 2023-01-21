@@ -1,6 +1,6 @@
 import "./Button.css";
 
-const Button = ({ symbol, btnText, btnWidth, btnHeight }) => {
+const Button = ({ symbol, btnText, btnWidth, btnHeight, icon }) => {
   return (
     <button
       style={{ width: { btnWidth }, height: { btnHeight } }}
@@ -8,6 +8,7 @@ const Button = ({ symbol, btnText, btnWidth, btnHeight }) => {
     >
       <div style={{ marginTop: "10px" }}>
         <span className="btnTextSymbol"> {symbol} </span>{" "}
+        <span className="reactIcon"> {icon} </span>
         <span> {btnText} </span>
       </div>
     </button>
