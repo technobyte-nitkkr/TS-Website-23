@@ -9,7 +9,9 @@ import {
   FaTwitch,
   FaTiktok,
   FaCopyright,
+  FaInstagram,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -25,54 +27,9 @@ export default function Footer() {
                 <div className="column1">
                   <ul className="">
                     <li>
-                      <a href="#!" className="text-white">
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Features
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Security
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Team
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Enterprise
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Customer Stories
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        The readME Project
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Resources
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Roadmap
-                      </a>
+                      <Link to={{ pathname: "/", hash: "#sponsors" }}>
+                        <span className="text-white">Sponsors</span>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -80,29 +37,14 @@ export default function Footer() {
                 <div className="column2">
                   <ul className="">
                     <li>
-                      <a href="#!" className="text-white">
-                        Platform
-                      </a>
+                      <Link to={{ pathname: "/", hash: "#events" }}>
+                        <span className="text-white">Events</span>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#!" className="text-white">
-                        Developer API
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Partners
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Electron
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Github Desktop
-                      </a>
+                      <Link to={{ pathname: "/", hash: "#lectures" }}>
+                        <span className="text-white">Lectures</span>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -111,84 +53,35 @@ export default function Footer() {
                 <div className="column3">
                   <ul className="">
                     <li>
-                      <a href="#!" className="text-white">
-                        Support
-                      </a>
+                      <Link to="/about">
+                        {" "}
+                        <span className="text-white"> About </span>{" "}
+                      </Link>
                     </li>
                     <li>
-                      <a href="#!" className="text-white">
-                        Docs
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Community Forum
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Profesional Services
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Skills
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Status
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Contact Github
-                      </a>
+                      {" "}
+                      <Link to="/team">
+                        {" "}
+                        <span className="text-white">
+                          {" "}
+                          Team Techspardha{" "}
+                        </span>{" "}
+                      </Link>{" "}
                     </li>
                   </ul>
                 </div>
                 <div className="column4">
                   <ul className="">
-                    <li>
-                      <a href="#!" className="text-white">
-                        Company
-                      </a>
-                    </li>
-                    <li>
+                    {/* <li>
                       <a href="#!" className="text-white">
                         About
                       </a>
                     </li>
                     <li>
                       <a href="#!" className="text-white">
-                        Blog
+                        Team Techspardha
                       </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Press
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Inclusion
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Social Impact
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">
-                        Shop
-                      </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -196,37 +89,29 @@ export default function Footer() {
           </div>
           <div className="Box-Row-2">
             <div className="ul1">
-              <FaCopyright className="icons" />
-              <p>2022Technobyte,Inc.</p>
-              <p>Terms</p>
-              <p>Privacy(Updated 08/2022)</p>
-              <p>Site Map</p>
-              <p>What is Git?</p>
+              <p>Developed with ❤️ by Technobyte</p>
             </div>
             <div className="footer-menu">
               <ul className="ul2">
                 <li>
-                  <FaTwitter size={"1.3em"} className="icons" />
+                  <a href="https://www.instagram.com/technobyte_nitkkr/">
+                    <FaInstagram size={"1.3em"} className="icons" />
+                  </a>
                 </li>
                 <li>
-                  {" "}
-                  <FaFacebookSquare size={"1.3em"} className="icons" />
+                  <a href="https://www.facebook.com/techn0byte/">
+                    <FaFacebookSquare size={"1.3em"} className="icons" />
+                  </a>
                 </li>
                 <li>
-                  {" "}
-                  <FaLinkedinIn size={"1.3em"} className="icons" />
+                  <a href="https://www.linkedin.com/company/technobyte-nitkkr/">
+                    <FaLinkedinIn size={"1.3em"} className="icons" />
+                  </a>
                 </li>
                 <li>
-                  <FaYoutube size={"1.3em"} className="icons" />
-                </li>
-                <li>
-                  <FaTwitch size={"1.3em"} className="icons" />
-                </li>
-                <li>
-                  <FaTiktok size={"1.3em"} className="icons" />
-                </li>
-                <li>
-                  <FaGithub size={"1.3em"} className="icons" />
+                  <a href="https://github.com/technobyte-nitkkr">
+                    <FaGithub size={"1.3em"} className="icons" />
+                  </a>
                 </li>
               </ul>
             </div>
