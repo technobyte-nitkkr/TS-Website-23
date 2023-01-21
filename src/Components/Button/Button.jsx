@@ -6,9 +6,9 @@ const Button = ({ symbol, btnText, btnWidth, btnHeight }) => {
       style={{ width: { btnWidth }, height: { btnHeight } }}
       className="btnContainer"
     >
-      <div style={{ marginTop: "10px" }}>
+      <div style={{ marginTop: "10px" , display: "flex", padding: "10px 20px", alignItems: "center"}}>
         <span className="btnTextSymbol"> {symbol} </span>{" "}
-        <span> {btnText} </span>
+        <span style={{paddingLeft: "10px"}}> {btnText} </span>
       </div>
     </button>
   );
