@@ -43,7 +43,7 @@ const Glimpses = () => {
         <div className="carouselCardContainer">
           <SwiperSlide>
             <div className="wrapper">
-              <img className="d-block  aboutimg" alt="" src={img1} />
+              <img className="d-block  aboutimg" alt="" src={img1} style={{width: "100%"}} />
             </div>
           </SwiperSlide>
           <SwiperSlide>
