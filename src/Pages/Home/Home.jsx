@@ -22,7 +22,7 @@ const Home = (props) => {
           break;
         case "#events":
           document
-            .getElementById("sponsorElement")
+            .getElementById("eventElementHelper")
             ?.scrollIntoView({ behavior: "smooth" });
           break;
         case "#about":

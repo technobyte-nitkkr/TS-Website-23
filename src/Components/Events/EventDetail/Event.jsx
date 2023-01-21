@@ -1,9 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useRef } from "react";
 import { useEffect } from "react";
 import Modal from "../../Modal/Modal";
-import NotificationItem from "../../Notification/Item/NotificationItem";
 import Terminal from "../../Terminal/Terminal";
 import "./style.css";
 

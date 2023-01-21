@@ -32,23 +32,24 @@ const NotificationList = () => {
   }, []);
 
   return (
-    <>
+    <div id="sponsorElementHelper" className="notificationContainer">
+      <h2
+        style={{
+          color: "#FFF",
+          fontSize: "32px",
+          fontWeight: 600,
+          fontFamily: "JetBrainsMono",
+          paddingLeft: "8px",
+        }}
+      >
+        {" "}
+        Recent Notifications:{" "}
+      </h2>
       {isLoading ? (
-        <div> Loading... </div>
+        <NotificationItem title={"✨ Fetching Notifications"} />
       ) : (
-        <div id="sponsorElementHelper" className="notificationContainer">
-          <h2
-            style={{
-              color: "#FFF",
-              fontSize: "32px",
-              fontWeight: 600,
-              fontFamily: "JetBrainsMono",
-              paddingLeft: "8px",
-            }}
-          >
-            {" "}
-            Recent Notifications:{" "}
-          </h2>
+        <>
+          {" "}
           {Object.keys(expandedObj).map((notif, key) => (
             <div
               onClick={() => {
@@ -63,21 +64,21 @@ const NotificationList = () => {
               />
             </div>
           ))}
-
-          <div
-            className="notificationBtnContainer"
-            onClick={() => {
-              setIsOpen(true);
-            }}
-          >
-            <Button btnText="View them all" />
-          </div>
-          {isOpen && (
-            <ExpandedNotification show={isOpen} onClickOutside={closeOverlay} />
-          )}
-        </div>
+        </>
       )}
-    </>
+
+      <div
+        className="notificationBtnContainer"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      >
+        <Button btnText="View them all" />
+      </div>
+      {isOpen && (
+        <ExpandedNotification show={isOpen} onClickOutside={closeOverlay} />
+      )}
+    </div>
   );
 };
 
