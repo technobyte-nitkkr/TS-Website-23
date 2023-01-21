@@ -37,6 +37,18 @@ const NotificationList = () => {
         <div> Loading... </div>
       ) : (
         <div id="sponsorElementHelper" className="notificationContainer">
+          <h2
+            style={{
+              color: "#FFF",
+              fontSize: "32px",
+              fontWeight: 600,
+              fontFamily: "JetBrainsMono",
+              paddingLeft: "8px",
+            }}
+          >
+            {" "}
+            Recent Notifications:{" "}
+          </h2>
           {Object.keys(expandedObj).map((notif, key) => (
             <NotificationItem
               title={notif}

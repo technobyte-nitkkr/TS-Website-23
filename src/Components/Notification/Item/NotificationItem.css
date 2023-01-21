@@ -1,6 +1,8 @@
 .notificationItemContainer {
   margin: 8px;
   padding: 8px;
+  margin-left: 0px;
+  /* padding-left: 0px; */
 }
 
 .notificationItem {

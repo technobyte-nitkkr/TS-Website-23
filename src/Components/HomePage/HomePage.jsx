@@ -8,7 +8,7 @@ const HomePage = () => {
         <div className="titleContainer">
           <h1 className="techspardha"> TECHSPARDHA </h1>
           <h3 className="festTheme"> PRISM OF POSSIBILITIES </h3>
-          <div className="presentedBy">
+          {/* <div className="presentedBy">
             <div>Presented By:</div>
             <div>
               <span className="presenterLogo">
@@ -24,7 +24,7 @@ const HomePage = () => {
                 <img className="presenter" src="/assets/docker.svg" />{" "}
               </span>
             </div>
-          </div>
+          </div> */}
           <NotificationList />
         </div>
       </div>
