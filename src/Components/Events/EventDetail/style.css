@@ -19,6 +19,7 @@
 .event-top{
     height: 60px;
     border-bottom: 1px solid #30363D;
+    text-align: center;
 }
 
 .event-names{
@@ -65,7 +66,7 @@
 
 .event-name{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0px 20px;
 }

@@ -59,7 +59,7 @@ const ExpandedNotificationDesc = ({ events, event, eventsData }) => {
       <div className="event-list">
         <div className="events">
           <div className="event-top event-names">
-            <div>Hello World</div>
+            <div>Notifications.md</div>
           </div>
           <div className="event-list-cont">
             {events.map((e, ind) => {
@@ -78,14 +78,20 @@ const ExpandedNotificationDesc = ({ events, event, eventsData }) => {
           </div>
         </div>
         <div className="event-terminal-container">
-          <Terminal />
+          <Terminal
+            element={
+              <div style={{ fontFamily: "JetBrainsMono", color: "#FFF" }}>
+                <p>{">>"} ✨ Fetching your notification data... </p>
+              </div>
+            }
+          />
         </div>
       </div>
       <div className="event-description">
         <div className="event-top event-name">
-          <img src="/assets/event/menu.svg" alt="" />
-          <img src="/assets/event/git.svg" alt="" />
-          <img src="/assets/event/notification.svg" alt="" />
+          {/* <img src="/assets/event/menu.svg" alt="" /> */}
+          <img src="/TS_LOGO.svg" alt="" />
+          {/* <img src="/assets/event/notification.svg" alt="" /> */}
         </div>
         <div className="event-details">
           <div className="event-heading">{currentEvent}</div>

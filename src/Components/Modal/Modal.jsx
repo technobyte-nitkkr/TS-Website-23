@@ -25,7 +25,7 @@ export default function Modal({
                 className="modal-top-img"
               />
             </div>
-            <SearchBox title="mona-github-github-g59jpq2w5w7.github.dev" />
+            <SearchBox title="https://techspardha.live" />
             <div className="tag">
               <img
                 src="/assets/modal/add.png"
