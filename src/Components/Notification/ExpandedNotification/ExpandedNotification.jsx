@@ -41,6 +41,7 @@ export default function ExpandedNotification({ onClickOutside, show }) {
             />
           }
           show={show}
+          isMenuOpen={false}
           onClickOutside={onClickOutside}
         />
       )}

@@ -9,8 +9,9 @@ export default function Modal({
   onMenuClick,
   onClickOutside,
   show,
+  isMenuOpen,
 }) {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(isMenuOpen);
   return (
     show && (
       <div className="modal-superContainer">

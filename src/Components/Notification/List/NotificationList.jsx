@@ -50,11 +50,18 @@ const NotificationList = () => {
             Recent Notifications:{" "}
           </h2>
           {Object.keys(expandedObj).map((notif, key) => (
-            <NotificationItem
-              title={notif}
-              content={notif.description}
+            <div
+              onClick={() => {
+                setIsOpen(true);
+              }}
               key={key}
-            />
+            >
+              <NotificationItem
+                title={notif}
+                content={notif.description}
+                key={key}
+              />
+            </div>
           ))}
 
           <div

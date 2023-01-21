@@ -68,6 +68,7 @@ export default function Event({ onClickOutside, show }) {
           menuItems={Object.keys(categoryWiseEvents)}
           onMenuClick={onCategorySelect}
           show={show}
+          isMenuOpen={true}
           onClickOutside={onClickOutside}
         />
       )}
