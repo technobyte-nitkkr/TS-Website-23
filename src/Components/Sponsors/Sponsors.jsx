@@ -25,7 +25,7 @@ const Sponsors = () => {
           {sponsors.map((sponsor, key) => {
             return (
               <div key={key}>
-                <h3> {sponsor?.sponsorSection} </h3>
+                <h3 className="sponsorSectionTitle"> {sponsor?.sponsorSection} </h3>
                 <div className="sponsorCarouselContainer">
                   {sponsor?.sponsors.map((spons) => {
                     return (

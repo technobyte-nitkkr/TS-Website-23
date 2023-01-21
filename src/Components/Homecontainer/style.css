@@ -10,7 +10,7 @@
 }
 
 .designContainer {
-    width: 100%;
+    width: 95%;
 }
 
 .hc-headingline{
@@ -70,11 +70,12 @@
     .hc-subbody{
         padding: 0.5rem 1rem !important;
     }
+
     .hc-headingline div{
         font-size: 25px;
     }
+
     .hc-headingline{
         margin-bottom: 10px;
     }
 }
-

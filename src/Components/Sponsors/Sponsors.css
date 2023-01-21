@@ -1,13 +1,14 @@
 .sponsorsElementContainer {
-  width: 100%;
+  width: 95%;
   display: flex;
+  /* background-color: red; */
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 
-
 .sponsorCarouselContainer {
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@
 .sponsorIcon {
   display: inline-block;
   margin: 0rem 0.5rem;
-
+  width: 200px;
 }
 
 .onboardingEmail {
@@ -25,6 +26,14 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
+}
+
+.sponsorSectionTitle{
+  font-family: 'segoeui';
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 1rem;
 }
 
 .sponsorEmailInpContainer {
@@ -39,9 +48,11 @@
     font-size: 25px;
     line-height: unset;
   }
+
   .sponsorCarouselContainer{
     margin-bottom: 1rem;
   }
+
   .sponsorIcon{
     margin: unset inherit;
   }
@@ -52,11 +63,12 @@
       font-size: 18px;
       line-height: unset;
     }
+
     .sponsorCarouselContainer{
       margin-bottom: 1rem;
     }
+
     .sponsorIcon{
       margin: unset inherit;
     }
 }
-

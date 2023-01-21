@@ -5,6 +5,7 @@
     align-items: center;
     overflow-x: scroll;
 }
+
 .carouselCardContainer::-webkit-scrollbar {
     display: none;
 }
@@ -13,11 +14,13 @@
     -ms-overflow-style: none;  
     scrollbar-width: none;  
 }
+
 .buttonContainer{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .buttonContainer>*{
     margin: 30px;
     width: 300px;
@@ -30,9 +33,10 @@
     
 .swiper-slide {
     width: 100%;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
 } 
+
 .swiper-slide-next {
     width: 100%;
     margin-left: 75px;
