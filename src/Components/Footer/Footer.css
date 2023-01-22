@@ -1,5 +1,5 @@
 .foot {
-    height: 161px;
+    height: 60px;
     color: white;
     display: flex;
     text-decoration-style: none;
@@ -15,7 +15,6 @@
 
 .Box-Row-2 {
     background-color: #161B22;
-    height: 15%;
     float: bottom;
     display: flex;
     align-items: center;
@@ -31,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
 }
 
