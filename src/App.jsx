@@ -17,6 +17,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { useEffect, useState } from "react";
 import TimeLine from "./Components/Timeline/TimeLine";
 // import Keys from "./config.keys";
+
 const GCIDKeys = import.meta.env.VITE_GCID;
 function App() {
   const [isProfileVisible, setIsProfileVisible] = useState(false);
@@ -46,6 +47,7 @@ function App() {
           <TimeLine
             show={isProfileVisible}
             onClickOutside={hideProfileSection}
+            data={localStorage.getItem("userdata")}
           />
           <div>
             <Routes>

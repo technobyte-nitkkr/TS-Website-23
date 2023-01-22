@@ -63,8 +63,6 @@ margin: 0;
 /* background-color: blue; */
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
-
 .profile-card{
   border-radius: 30px;
   overflow: hidden;
