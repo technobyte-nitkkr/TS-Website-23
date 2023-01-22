@@ -13,7 +13,7 @@ export default function Navbar({ setProfileVisible }) {
     onSuccess: async (credentialResponse) => {
       //  get token id
       console.log(credentialResponse);
-      const TOKEN = credentialResponse.credential;
+      const TOKEN = credentialResponse.access_token;
 
       if (localStorage.getItem("ts20token")) {
         const data = JSON.parse(localStorage.getItem("userdata"));

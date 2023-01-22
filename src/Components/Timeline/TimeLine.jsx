@@ -17,6 +17,13 @@ export default function TimeLine({ show, onClickOutside, data }) {
 
 const TimeLineBody = ({ data }) => {
   // const [userData, setUserData] = useState(null);
+
+  const logout = () => {
+    localStorage.removeItem("userdata");
+    localStorage.removeItem("ts20token");
+    window.location.reload();
+  };
+
   const [isLoading, setIsLoading] = useState(true);
   const [userEvents, setUserEvents] = useState([]);
   useEffect(() => {
@@ -45,6 +52,7 @@ const TimeLineBody = ({ data }) => {
               ? "You are an admin"
               : "You are not an admin"}
           </div>
+         
           <div className="text-bright">
             &gt;&gt;{" "}
             {userEvents.length == 0 ? (
@@ -57,6 +65,11 @@ const TimeLineBody = ({ data }) => {
               </>
             )}
           </div>
+            <div className="text-bright">
+              &gt;&gt;{" "}
+
+              <span onClick={logout}>Logout</span>
+            </div>
         </>
       )}
     </div>
