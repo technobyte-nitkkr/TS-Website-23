@@ -34,7 +34,7 @@ const EventCarousel = () => {
   }, []);
 
   return (
-    <div>
+    <div id="eventElementHelper">
       <Swiper
         breakpoints={{
           576: {
@@ -65,7 +65,7 @@ const EventCarousel = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <div className="carouselCardContainer">
+        <div className="carouselCardContainer" >
          {
           isLoading ? (
             <div> Loading.... </div>

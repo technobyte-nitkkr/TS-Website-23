@@ -32,7 +32,7 @@ const NotificationList = () => {
   }, []);
 
   return (
-    <div id="sponsorElementHelper" className="notificationContainer">
+    <div  className="notificationContainer">
       <h2
         style={{
           color: "#FFF",

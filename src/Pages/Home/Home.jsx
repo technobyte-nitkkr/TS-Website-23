@@ -27,7 +27,7 @@ const Home = (props) => {
           break;
         case "#about":
           document
-            .getElementById("aboutElementHelper")
+            .getElementById("aboutElementHelper1")
             ?.scrollIntoView({ behavior: "smooth" });
           break;
         case "#lectures":

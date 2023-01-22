@@ -19,12 +19,14 @@ function useWindowSize() {
         height: window.innerHeight,
       });
     }
+
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return windowSize;
 }
+
 const Lecture = () => {
   const [guestList, SetGuestList] = useState([]);
   const scrollref = useRef(null);
@@ -206,7 +208,7 @@ const Lecture = () => {
             </>
           )}
         </div>
-        <span id="aboutElementHelper"></span>
+        <span id="glHelper"></span>
       </div>
     </>
   );

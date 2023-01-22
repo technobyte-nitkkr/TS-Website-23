@@ -21,7 +21,7 @@ const Sponsors = () => {
       {isLoading ? (
         <div> Loading.... </div>
       ) : (
-        <div id="sponsorElement" className="sponsorsElementContainer">
+          <div id="sponsorElementHelper" className="sponsorsElementContainer">
           {sponsors.map((sponsor, key) => {
             return (
               <div key={key}>
@@ -51,7 +51,7 @@ const Sponsors = () => {
               Would you would like to be a part of Techspardha? <br />
               Kindly share your email below and our team would reach out to you.{" "}
             </p>
-            <div className="sponsorEmailInpContainer" id="eventElementHelper">
+            <div className="sponsorEmailInpContainer" >
               <InputBox />
               <Button btnText={"Submit"} />
             </div>
