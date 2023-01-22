@@ -1,4 +1,5 @@
 import "./App.css";
+
 import image from "/assets/Main-background.svg";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";

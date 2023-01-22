@@ -4,6 +4,7 @@ import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import { useGoogleOneTapLogin } from "@react-oauth/google";
+import axios from "axios";
 
 export default function Navbar() {
   useGoogleOneTapLogin({
@@ -19,12 +20,19 @@ export default function Navbar() {
       }
 
       try {
-        const response = await request.post("/login", {
-          idToken: TOKEN,
+        const response = await axios.post("/login", {
+          idToken: TOKEN
         });
+        console.log(response.data);
 
         console.log("HERE");
-        console.log(response.data.token);
+        // console.log();
+        const JWT = response.data.data.token;
+
+        // set token in local storage
+        
+        localStorage.setItem("ts20token",JWT);
+        localStorage.setItem("userdata", JSON.stringify(response.data.data.user));
       } catch (error) {
         console.log(error);
       }
@@ -87,12 +95,14 @@ export default function Navbar() {
             </a>
           </li>
           <li className="navbarItem Button1">
-            <Button
+            {localStorage.getItem("ts20token") ? (<Link to={{ pathname: "/profile", hash: "#about" }}>
+              <span>Profile</span>
+            </Link>) : <Button
               symbol={"▶️"}
               btnText={"Login"}
               btnHeight="100%"
               btnWidth={"100%"}
-            />
+            />}
           </li>
         </ul>
       </div>
