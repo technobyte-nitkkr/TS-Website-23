@@ -1,7 +1,5 @@
 import EventCard from "../Card/EventCard";
 import Event from "../EventDetail/Event";
-import papyrusVitaeEventImage from "../../../../public/assets/events/papyrus-vitae.png";
-import programmingEventImage from "../../../../public/assets/events/programming.png";
 import Button from "../../Button/Button";
 
 import { useState, useEffect } from "react";

@@ -1,18 +1,19 @@
 import "./Navbar.css";
-// import TSlogo from "/assets/TS_LOGO.svg";
 import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import { useGoogleOneTapLogin } from "@react-oauth/google";
 import axios from "axios";
+import TimeLine from "../Timeline/TimeLine";
+import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ setProfileVisible }) {
   useGoogleOneTapLogin({
     onSuccess: async (credentialResponse) => {
       //  get token id
       console.log(credentialResponse);
       const TOKEN = credentialResponse.credential;
-      
+
       if (localStorage.getItem("ts20token")) {
         const data = JSON.parse(localStorage.getItem("userdata"));
         const token = localStorage.getItem("ts20token");
@@ -21,7 +22,7 @@ export default function Navbar() {
 
       try {
         const response = await axios.post("/login", {
-          idToken: TOKEN
+          idToken: TOKEN,
         });
         console.log(response.data);
 
@@ -30,9 +31,12 @@ export default function Navbar() {
         const JWT = response.data.data.token;
 
         // set token in local storage
-        
-        localStorage.setItem("ts20token",JWT);
-        localStorage.setItem("userdata", JSON.stringify(response.data.data.user));
+
+        localStorage.setItem("ts20token", JWT);
+        localStorage.setItem(
+          "userdata",
+          JSON.stringify(response.data.data.user)
+        );
       } catch (error) {
         console.log(error);
       }
@@ -41,11 +45,17 @@ export default function Navbar() {
       console.log("Login Failed");
     },
   });
+
+  // const [isOpen, setIsOpen] = useState(false);
+  // const closeOverlay = () => setIsOpen(false);
+
   return (
     <nav className="nav">
+      {/* <TimeLine show={isOpen} onClickOutside={closeOverlay} /> */}
       <Link to="/" className="logoLink">
         <img src={logo} alt="Techspardha" className="ts-logo" />
       </Link>
+
       <div
         href="#"
         class="toggle-button"
@@ -95,14 +105,25 @@ export default function Navbar() {
             </a>
           </li>
           <li className="navbarItem Button1">
-            {localStorage.getItem("ts20token") ? (<Link to={{ pathname: "/profile", hash: "#about" }}>
-              <span>Profile</span>
-            </Link>) : <Button
-              symbol={"▶️"}
-              btnText={"Login"}
-              btnHeight="100%"
-              btnWidth={"100%"}
-            />}
+            {localStorage.getItem("ts20token") ? (
+              <span
+                onClick={() => {
+                  setProfileVisible(true);
+                }}
+              >
+                Profile
+              </span>
+            ) : (
+              <span>
+                {" "}
+                <Button
+                  symbol={"▶️"}
+                  btnText={"Login"}
+                  btnHeight="100%"
+                  btnWidth={"100%"}
+                />{" "}
+              </span>
+            )}
           </li>
         </ul>
       </div>

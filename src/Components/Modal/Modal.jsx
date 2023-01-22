@@ -26,11 +26,12 @@ export default function Modal({
               />
             </div>
             <SearchBox title="https://techspardha.live" />
-            <div className="tag">
+            <div className="tag" onClick={onClickOutside}>
               <img
                 src="/assets/modal/add.png"
                 alt=""
                 className="modal-top-img"
+                style={{ transform: "rotate(45deg)" }}
               />
             </div>
           </div>

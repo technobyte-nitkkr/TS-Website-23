@@ -3,8 +3,15 @@ import Modal from "../Modal/Modal";
 import Terminal from "../Terminal/Terminal";
 import "./style.css";
 
-export default function TimeLine({show, onClickOutside}) {
-  return <Modal element={<Terminal element={<TimeLineBody />} />} show={show} onClickOutside={onClickOutside} />;
+export default function TimeLine({ show, onClickOutside }) {
+  return (
+    <Modal
+      element={<Terminal element={<TimeLineBody />} />}
+      isMenuOpen={false}
+      show={show}
+      onClickOutside={onClickOutside}
+    />
+  );
 }
 
 const TimeLineBody = () => {

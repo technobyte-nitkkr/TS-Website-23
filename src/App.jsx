@@ -14,12 +14,18 @@ import Home from "./Pages/Home/Home";
 import "swiper/css/bundle";
 import About from "./Pages/About/About";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import TimeLine from "./Components/Timeline/TimeLine";
 // import Keys from "./config.keys";
-const GCIDKeys = import.meta.env.VITE_GCID
+const GCIDKeys = import.meta.env.VITE_GCID;
 function App() {
+  const [isProfileVisible, setIsProfileVisible] = useState(false);
+  const hideProfileSection = () => {
+    setIsProfileVisible(false);
+  };
+
   return (
-    <GoogleOAuthProvider clientId= {GCIDKeys}>
+    <GoogleOAuthProvider clientId={GCIDKeys}>
       <div
         className="App"
         style={{
@@ -35,8 +41,12 @@ function App() {
       >
         <Router>
           <div className="home-div">
-            <Navbar />
+            <Navbar setProfileVisible={setIsProfileVisible} />
           </div>
+          <TimeLine
+            show={isProfileVisible}
+            onClickOutside={hideProfileSection}
+          />
           <div>
             <Routes>
               <Route path="/" exact element={<Home />} />
