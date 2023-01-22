@@ -2,7 +2,7 @@ import "./Navbar.css";
 import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-import { useGoogleOneTapLogin, useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { useState } from "react";
 
@@ -12,8 +12,7 @@ export default function Navbar({ setProfileVisible }) {
   const login = useGoogleLogin({
     onSuccess: async (credentialResponse) => {
       //  get token id
-      console.log(credentialResponse);
-      const TOKEN = credentialResponse.credential;
+      const TOKEN = credentialResponse.access_token;
 
       if (localStorage.getItem("ts20token")) {
         const data = JSON.parse(localStorage.getItem("userdata"));
@@ -25,10 +24,7 @@ export default function Navbar({ setProfileVisible }) {
         const response = await axios.post("/login", {
           idToken: TOKEN,
         });
-        console.log(response.data);
 
-        console.log("HERE");
-        // console.log();
         const JWT = response.data.data.token;
 
         // set token in local storage
@@ -46,10 +42,8 @@ export default function Navbar({ setProfileVisible }) {
     onError: () => {
       console.log("Login Failed");
     },
+    // flow: "auth-code",
   });
-
-  // const [isOpen, setIsOpen] = useState(false);
-  // const closeOverlay = () => setIsOpen(false);
 
   return (
     <nav className="nav">
