@@ -10,7 +10,6 @@ const Sponsors = () => {
   useEffect(() => {
     axios.get("/sponsors").then((res) => {
       const sponsors = res.data.data.sponsors;
-      console.log("sponsors: ", sponsors);
       setSponsors(sponsors);
       setIsLoading(false);
     });
@@ -21,7 +20,7 @@ const Sponsors = () => {
       {isLoading ? (
         <div> Loading.... </div>
       ) : (
-          <div id="sponsorElementHelper" className="sponsorsElementContainer">
+        <div id="sponsorElementHelper" className="sponsorsElementContainer">
           {sponsors.map((sponsor, key) => {
             return (
               <div key={key}>
@@ -51,7 +50,7 @@ const Sponsors = () => {
               Would you would like to be a part of Techspardha? <br />
               Kindly share your email below and our team would reach out to you.{" "}
             </p>
-            <div className="sponsorEmailInpContainer" >
+            <div className="sponsorEmailInpContainer">
               <InputBox />
               <Button btnText={"Submit"} />
             </div>

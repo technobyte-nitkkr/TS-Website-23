@@ -27,9 +27,15 @@ const TimeLineBody = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [userEvents, setUserEvents] = useState([]);
   useEffect(() => {
-    axios.get("/user/event").then((res) => {
-      setUserEvents(res.data.data.events);
-    });
+    axios
+      .get("/user/event", {
+        headers: {
+          Authorization: localStorage.getItem("ts20token"),
+        },
+      })
+      .then((res) => {
+        setUserEvents(res.data.data.events);
+      });
     setIsLoading(false);
   }, []);
 
@@ -60,7 +66,7 @@ const TimeLineBody = ({ data }) => {
             ) : (
               <>
                 {userEvents.map((event) => {
-                  return <div>&gt;&gt; {event}</div>;
+                  return <div>&gt;&gt; {event?.eventName}</div>;
                 })}
               </>
             )}

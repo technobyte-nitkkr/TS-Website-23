@@ -49,11 +49,8 @@ const Lecture = () => {
       .then((data) => {
         lectures = data.data.lectures;
         SetGuestList(data.data.lectures);
-        console.log(lectures);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
   }, []);
 
   return (

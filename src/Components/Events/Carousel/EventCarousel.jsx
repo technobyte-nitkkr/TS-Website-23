@@ -24,8 +24,6 @@ const EventCarousel = () => {
   useEffect(() => {
     axios.get("/events/categories").then((res) => {
       const categories = res.data.data.categories;
-      console.log("sponsors: ", categories);
-      // setSponsors(sponsors);
       setCategories(categories);
       setIsLoading(false);
     });
