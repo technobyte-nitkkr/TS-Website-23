@@ -32,7 +32,7 @@ const NotificationList = () => {
   }, []);
 
   return (
-    <div  className="notificationContainer">
+    <div className="notificationContainer">
       <h2
         style={{
           color: "#FFF",
@@ -69,6 +69,7 @@ const NotificationList = () => {
 
       <div
         className="notificationBtnContainer"
+        id="aboutElementHelper"
         onClick={() => {
           setIsOpen(true);
         }}

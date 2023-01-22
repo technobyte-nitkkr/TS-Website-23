@@ -4,7 +4,7 @@ import papyrusVitaeEventImage from "../../../../public/assets/events/papyrus-vit
 import programmingEventImage from "../../../../public/assets/events/programming.png";
 import Button from "../../Button/Button";
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -34,7 +34,7 @@ const EventCarousel = () => {
   }, []);
 
   return (
-    <div id="eventElementHelper">
+    <div>
       <Swiper
         breakpoints={{
           576: {
@@ -65,9 +65,8 @@ const EventCarousel = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <div className="carouselCardContainer" >
-         {
-          isLoading ? (
+        <div className="carouselCardContainer">
+          {isLoading ? (
             <div> Loading.... </div>
           ) : (
             categories.map((category, key) => {
@@ -90,9 +89,7 @@ const EventCarousel = () => {
                 </SwiperSlide>
               );
             })
-          )
-         }
-
+          )}
         </div>
       </Swiper>
       <div

@@ -27,7 +27,7 @@ const Home = (props) => {
           break;
         case "#about":
           document
-            .getElementById("aboutElementHelper1")
+            .getElementById("aboutElementHelper")
             ?.scrollIntoView({ behavior: "smooth" });
           break;
         case "#lectures":
@@ -50,7 +50,7 @@ const Home = (props) => {
       <Homecontainer heading={"Event Categories"} element={<EventCarousel />} />
       <Homecontainer heading={"Guest Lectures"} element={<Lecture />} />
       <Homecontainer heading={"Meet Our Sponsors"} element={<Sponsors />} />
-      
+
       <Homecontainer
         heading={"Testimonials"}
         element={<TestimonialCarousel />}

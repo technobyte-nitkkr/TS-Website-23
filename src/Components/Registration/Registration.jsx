@@ -18,7 +18,7 @@ export default function Registration({ showBtn }) {
         include competitions, exhibitions, guest lectures as well as workshops.
       </p>
       {showBtn ? (
-        <div className="dwnBtn">
+        <div className="dwnBtn" id="eventElementHelper">
           {/* <Link to="/about"> */}
           <a href="/about">
             <Button btnText={"Know more"} />
