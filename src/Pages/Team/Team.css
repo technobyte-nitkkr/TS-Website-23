@@ -19,6 +19,8 @@
   flex-direction: column;
   text-align: center;
   margin-top: 12rem;
+  font-family: 'segoeui', cursive !important;
+  font-weight: 500;
 
   /* background-repeat: no-repeat; */
   /* background-position: center; */

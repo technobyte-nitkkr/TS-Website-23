@@ -2,13 +2,14 @@ import "./Navbar.css";
 import logo from "/assets/Techspardha.png";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-import { useGoogleOneTapLogin } from "@react-oauth/google";
+import { useGoogleOneTapLogin, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
-import TimeLine from "../Timeline/TimeLine";
 import { useState } from "react";
 
 export default function Navbar({ setProfileVisible }) {
-  useGoogleOneTapLogin({
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const login = useGoogleLogin({
     onSuccess: async (credentialResponse) => {
       //  get token id
       console.log(credentialResponse);
@@ -37,6 +38,7 @@ export default function Navbar({ setProfileVisible }) {
           "userdata",
           JSON.stringify(response.data.data.user)
         );
+        setIsLoggedIn(true);
       } catch (error) {
         console.log(error);
       }
@@ -105,7 +107,7 @@ export default function Navbar({ setProfileVisible }) {
             </a>
           </li>
           <li className="navbarItem Button1">
-            {localStorage.getItem("ts20token") ? (
+            {localStorage.getItem("ts20token") || isLoggedIn ? (
               <span
                 onClick={() => {
                   setProfileVisible(true);
@@ -114,7 +116,7 @@ export default function Navbar({ setProfileVisible }) {
                 Profile
               </span>
             ) : (
-              <span>
+              <span onClick={() => login()}>
                 {" "}
                 <Button
                   symbol={"▶️"}
