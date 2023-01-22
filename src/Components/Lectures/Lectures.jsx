@@ -90,57 +90,7 @@ const Lecture = () => {
               {guestList.map((item, index) => {
                 return (
                   <SwiperSlide>
-                    <div key={index} class="profile-card">
-                      <header>
-                        <img src={item.imageUrl} />
-                        <h1>{item.name}</h1>
-                        <h2>{item.date}</h2>
-                      </header>
-                      <div class="profile-bio">
-                        <p>
-                          {expanded !== index + 1
-                            ? item.desc.substring(0, 200)
-                            : item.desc}
-                        </p>
-                      </div>
-                      {expanded !== index + 1 && (
-                        <div
-                          className="buttonarrow"
-                          onClick={() => {
-                            setExpanded(index + 1);
-                          }}
-                        >
-                          Show More
-                        </div>
-                      )}
-                      {expanded === index + 1 && (
-                        <div
-                          className="buttonarrow"
-                          onClick={() => {
-                            setExpanded(0);
-                          }}
-                        >
-                          Show Less
-                        </div>
-                      )}
-                      <ul class="profile-social-links">
-                        <li>
-                          <a href={item?.insta}>
-                            <FaInstagram className="faSocial" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href={item?.linkedin}>
-                            <FaLinkedin className="faSocial" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href={item?.facebook}>
-                            <FaFacebook className="faSocial" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                    <GuestCard item={item} index={index} expanded={expanded} setExpanded={setExpanded}/>
                   </SwiperSlide>
                 );
               })}
@@ -149,57 +99,7 @@ const Lecture = () => {
             <>
               {guestList.map((item, index) => {
                 return (
-                  <div key={index} class="profile-card">
-                    <header>
-                      <img src={item.imageUrl} />
-                      <h1>{item.name}</h1>
-                      <h2>{item.date}</h2>
-                    </header>
-                    <div class="profile-bio">
-                      <p>
-                        {expanded !== index + 1
-                          ? item.desc.substring(0, 200)
-                          : item.desc}
-                      </p>
-                    </div>
-                    {expanded !== index + 1 && (
-                      <div
-                        className="buttonarrow"
-                        onClick={() => {
-                          setExpanded(index + 1);
-                        }}
-                      >
-                        Show More
-                      </div>
-                    )}
-                    {expanded === index + 1 && (
-                      <div
-                        className="buttonarrow"
-                        onClick={() => {
-                          setExpanded(0);
-                        }}
-                      >
-                        Show Less
-                      </div>
-                    )}
-                    <ul class="profile-social-links">
-                      <li>
-                        <a href={item?.insta}>
-                          <FaInstagram className="faSocial" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href={item?.linkedin}>
-                          <FaLinkedin className="faSocial" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href={item?.facebook}>
-                          <FaFacebook className="faSocial" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  <GuestCard item={item} index={index} expanded={expanded} setExpanded={setExpanded}/>
                 );
               })}
             </>
@@ -212,3 +112,38 @@ const Lecture = () => {
 };
 
 export default Lecture;
+
+const GuestCard = ({index, item, expanded, setExpanded})=>{
+  return(
+  <div key={index} className="profile-card p-4 m-4 flex flex-col">
+    <div className="profile-header pb-4">
+      <img src={item.imageUrl} className="mr-4"/>
+      <div className="flex flex-col items-start">
+        <h1 className="text-xl font-normal">{item.name}</h1>
+        <h2 className="text-md text-gray-400">{item.date}</h2>
+      </div>
+    </div>
+    <div class="profile-bio overflow-y-scroll bg-[#1C1C1C] p-2 mb-4">
+      <p>
+          {item.desc}
+      </p>
+    </div>
+    <ul class="profile-social-links flex justify-evenly mb-4">
+      <li>
+        <a href={item?.insta}>
+          <FaInstagram className="faSocial" />
+        </a>
+      </li>
+      <li>
+        <a href={item?.linkedin}>
+          <FaLinkedin className="faSocial" />
+        </a>
+      </li>
+      <li>
+        <a href={item?.facebook}>
+          <FaFacebook className="faSocial" />
+        </a>
+      </li>
+    </ul>
+  </div>)
+}
