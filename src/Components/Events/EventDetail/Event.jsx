@@ -171,9 +171,7 @@ const EventDesc = ({ events, event, eventsData }) => {
       </div>
       <div className="event-description">
         <div className="event-top event-name">
-          {/* <img src="/assets/event/menu.svg" alt="" /> */}
           <img src="/TS_LOGO.svg" alt="" />
-          {/* <img src="/assets/event/notification.svg" alt="" /> */}
         </div>
         <div className="event-details">
           <div className="event-heading">{currentEvent}</div>
