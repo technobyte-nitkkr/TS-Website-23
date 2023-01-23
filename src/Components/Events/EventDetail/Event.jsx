@@ -33,7 +33,7 @@ export default function Event({ onClickOutside, show }) {
 
         setEvents(eventData);
         setEvent(Object.keys(eventData)[0]);
-        setIsFetching(false);
+        setTimeout(() => setIsFetching(false), 1000);
       });
   };
 

@@ -4,7 +4,7 @@ import Terminal from "../Terminal/Terminal";
 import "./GenericLoader.css";
 
 const GenericLoader = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const closeOverlay = () => setIsOpen(false);
 
   return (
@@ -18,11 +18,11 @@ const GenericLoader = () => {
 };
 
 const LoaderBody = () => {
-  <div className="timeline-body">
-    <div className="text-bright">
-      &gt;&gt; ✨ Fetching your notification data...
+  return (
+    <div className="timeline-body">
+      <div className="text-bright">&gt;&gt; ✨ Fetching event data...</div>
     </div>
-  </div>;
+  );
 };
 
 export default GenericLoader;
