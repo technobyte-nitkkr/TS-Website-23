@@ -59,7 +59,7 @@ const TimeLineBody = ({ data }) => {
               : "You are not an admin"}
           </div>
 
-          <div className="text-bright">
+          {/* <div className="text-bright">
             &gt;&gt;{" "}
             {userEvents.length === 0 ? (
               "You have not registered for any events"
@@ -99,7 +99,7 @@ const TimeLineBody = ({ data }) => {
                 })}
               </>
             )}
-          </div>
+          </div> */}
           <div className="text-bright">
             &gt;&gt;{" "}
             <span style={{ cursor: "pointer" }} onClick={logout}>

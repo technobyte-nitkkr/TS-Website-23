@@ -104,6 +104,7 @@ export default function Navbar({ setProfileVisible }) {
                 onClick={() => {
                   setProfileVisible(true);
                 }}
+                style={{ cursor: "pointer" }}
               >
                 Profile
               </span>
