@@ -4,7 +4,7 @@
   /* position: relative; */
 position: relative;
 /* background-color: blue; */
-  width: 90%  ;
+  /* width: 90%  ; */
 margin: 0 auto;
 padding: 0;
   /* top: 250px; */
@@ -17,15 +17,15 @@ padding: 0;
 .carouselGL{
   margin:auto;
   display: flex;
-  width: 90%;
-  margin: 10px auto;
+  /* width: 90%; */
+  margin: 10px 0px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .guestLecture{
   padding: 15px 50px;
-  margin: 70px auto;
+  margin: 70px 0px;
   border-radius: 0 70px 0 70px;
   border: 5px solid white;
   border-left: none;
@@ -64,7 +64,8 @@ margin: 0;
 }
 
 .profile-card{
-    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
     background: rgba(255, 255, 255, 0.2);
     height: 500px;
 }
@@ -77,4 +78,11 @@ margin: 0;
 .profile-header img{
   width: 100px;
   height: 100px;
+}
+
+@media only screen and (max-width: 400px) {
+  .profile-card{
+    min-width: 290px;
+    max-width: 290px;
+  }
 }
