@@ -59,8 +59,10 @@ const Lecture = () => {
         for(var i of elem.children){
           if(i.offsetLeft < elem.scrollLeft) next++;
         }
-        next = (next + 1)%elem.children.length;
-        elem.scrollLeft = (elem.children[next].offsetLeft);
+        next = (next + 1) % elem.children.length;
+        const childWidth = elem.scrollWidth  / elem.children.length;
+        elem.scrollLeft = (parseInt(elem.scrollLeft / childWidth) * childWidth + childWidth) % elem.scrollWidth;
+        if(elem.scrollLeft + elem.offsetWidth * 1.05 > elem.scrollWidth) elem.scrollLeft = 0;
       }, 2000)
   }, []);
 

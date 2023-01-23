@@ -5,69 +5,54 @@ import reviews from "../Testimonial.json";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { useEffect, useRef } from "react";
 const TestimonialCarousel = () => {
+  const review = useRef();
+  useEffect(()=>{
+    setInterval(()=>{
+      const elem = review.current;
+      var next = 0;
+      for(var i of elem.children){
+        if(i.offsetLeft < elem.scrollLeft) next++;
+      }
+      next = (next + 1) % elem.children.length;
+      const childWidth = elem.scrollWidth  / elem.children.length;
+      elem.scrollLeft = (parseInt(elem.scrollLeft / childWidth) * childWidth + childWidth) % elem.scrollWidth;
+      if(elem.scrollLeft + elem.offsetWidth * 1.05 > elem.scrollWidth) elem.scrollLeft = 0;
+    }, 2000)
+  }, [])
   return (
     <div>
-      <Swiper
-        breakpoints={{
-          576: {
-            width: 576,
-            slidesPerView: 1,
-          },
-          768: {
-            width: 768,
-            slidesPerView: 2,
-            spaceBetween:100,
-          },
-        }}
-        spaceBetween={70}
-        centeredSlides={true}
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={{
-          nextEl: ".image-swiper-button-next",
-          prevEl: ".image-swiper-button-prev",
-        }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-      <div className="carouselCardContainer">
+      <div className="carouselCardContainer scroll-smooth" ref={review}>
 
         {reviews.data.map((item, index) => (
         
-            <SwiperSlide>
-              <TestimonialCard name={item.name} profileImg={"/assets/avatars/avatar.svg"} review={item.review} course={item.course} branch={item.branch}/>
-            </SwiperSlide>
-            /* <div class="cardBox">
-              <div class="testimonial">
-                <div class="pic">
-                  <img src={item.imageUrl} />
-                </div>
-                <h3 class="title">{item.name}</h3>
-                <span class="post">
-                  <p>
-                    {item.course} ( {item.branch} ), {item.year} 
-                  </p>
-                </span>
-                <p class="description">{item.review}</p>
-              </div>
-            </div> */
+            <TestimonialCard name={item.name} profileImg={"/assets/avatars/avatar.svg"} review={item.review} course={item.course} branch={item.branch}/>
           
-        ))}
+          ))}
         
-        {/* <SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide>
-        <SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide>
-        <SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide>
-        <SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide> */}
       </div>
-      </Swiper>
     </div>
   );
 };
 
 export default TestimonialCarousel;
+
+{/* <SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide>
+<SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide>
+<SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide>
+<SwiperSlide><TestimonialCard name={"Aman Sani"} profileImg={"/assets/avatars/avatar.svg"} postition={"UX/UI Designer"}/></SwiperSlide> */}
+/* <div class="cardBox">
+  <div class="testimonial">
+    <div class="pic">
+      <img src={item.imageUrl} />
+    </div>
+    <h3 class="title">{item.name}</h3>
+    <span class="post">
+      <p>
+        {item.course} ( {item.branch} ), {item.year} 
+      </p>
+    </span>
+    <p class="description">{item.review}</p>
+  </div>
+</div> */

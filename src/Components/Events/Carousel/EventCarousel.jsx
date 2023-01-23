@@ -2,7 +2,7 @@ import EventCard from "../Card/EventCard";
 import Event from "../EventDetail/Event";
 import Button from "../../Button/Button";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -21,53 +21,35 @@ const EventCarousel = () => {
     animate: true,
   };
 
+  const event = useRef();
+
   useEffect(() => {
     axios.get("/events/categories").then((res) => {
       const categories = res.data.data.categories;
       setCategories(categories);
       setIsLoading(false);
     });
+    setInterval(()=>{
+      const elem = event.current;
+      var next = 0;
+      for(var i of elem.children){
+        if(i.offsetLeft < elem.scrollLeft) next++;
+      }
+      next = (next + 1) % elem.children.length;
+      const childWidth = elem.scrollWidth  / elem.children.length;
+      elem.scrollLeft = (parseInt(elem.scrollLeft / childWidth) * childWidth + childWidth) % elem.scrollWidth;
+      if(elem.scrollLeft + elem.offsetWidth * 1.05 > elem.scrollWidth) elem.scrollLeft = 0;
+    }, 2000)
   }, []);
 
   return (
     <div>
-      <Swiper
-        breakpoints={{
-          576: {
-            width: 576,
-            slidesPerView: 1,
-          },
-          768: {
-            width: 768,
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        }}
-        spaceBetween={3000}
-        centeredSlides={true}
-        slideWidhth
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        navigation={{
-          nextEl: ".image-swiper-button-next",
-          prevEl: ".image-swiper-button-prev",
-          disabledClass: "swiper-button-disabled",
-        }}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <div className="carouselCardContainer">
+        <div className="carouselCardContainer scroll-smooth" ref={event}>
           {isLoading ? (
             <div> Loading.... </div>
           ) : (
             categories.map((category, key) => {
               return (
-                <SwiperSlide key={key}>
                   <div
                     onClick={() => {
                       setIsOpen(true);
@@ -82,12 +64,10 @@ const EventCarousel = () => {
                       }}
                     />
                   </div>
-                </SwiperSlide>
               );
             })
           )}
         </div>
-      </Swiper>
       <div
         className="buttonContainer"
         id="glHelper"
