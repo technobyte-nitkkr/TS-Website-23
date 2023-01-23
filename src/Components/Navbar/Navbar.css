@@ -8,14 +8,16 @@
     display: flex;
     justify-content: space-between;
     padding: 16px;
-    margin: 24px 24px 0px 0px;
     text-decoration-style: none;
     box-sizing: border-box;
     background: rgba(13, 13, 13, 0.6);
     border: 1px solid #8B949E;
     backdrop-filter: blur(24px);
-    top: 0;
-    position: absolute;
+    position: fixed;
+    max-width: 95vw;
+    margin: auto;
+    left: 2vw;
+    top: 24px;
     z-index: 100;
 }
 
@@ -98,6 +100,9 @@
     background-color: #555;
 }
 
+.nav-button:hover{
+    background-color: transparent !important;
+}
 
 .toggle-button {
     position: absolute;
@@ -149,18 +154,19 @@
 
     .navMenus {
         position: absolute;
-        right: 0px;
+        right: -1rem;
         background-color: #555;
         opacity: 80%;
         align-items: unset;
-        top: 100%;
+        top: calc(100% + 1rem);
         height: auto;
-        backdrop-filter: blur(20px);
         padding:20px;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
     }
 
     .Buttonclose{
-        font-size:25px;
+        font-size:20px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -110,6 +110,7 @@ export default function Navbar({ setProfileVisible }) {
                   btnText={"Login"}
                   btnHeight="100%"
                   btnWidth={"100%"}
+                  onClick={()=>login()}
                 />
             )}
           </li>
