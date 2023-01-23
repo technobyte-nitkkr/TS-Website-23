@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
+import GenericLoader from "../../Loader/GenericLoader";
 import Modal from "../../Modal/Modal";
 import Terminal from "../../Terminal/Terminal";
 import "./style.css";
@@ -10,10 +11,14 @@ export default function Event({ onClickOutside, show }) {
   const [categoryWiseEvents, setCategoryWiseEvents] = useState({});
   const [event, setEvent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isFetching, setIsFetching] = useState(false);
+  const [firstTimne, setFirstTime] = useState(true);
 
   const [currentCategory, setCurrentCategory] = useState("Astronomy");
 
   const onCategorySelect = (category) => {
+    setIsFetching(true);
+    setFirstTime(false);
     axios
       .get("/events/description", {
         params: { eventCategory: category },
@@ -28,6 +33,7 @@ export default function Event({ onClickOutside, show }) {
 
         setEvents(eventData);
         setEvent(Object.keys(eventData)[0]);
+        setIsFetching(false);
       });
   };
 
@@ -52,13 +58,14 @@ export default function Event({ onClickOutside, show }) {
   return (
     <>
       {isLoading ? (
-        <div> Loading... </div>
+        <GenericLoader />
+      ) : isFetching ? (
+        <GenericLoader />
       ) : (
         <Modal
           element={
             <EventDesc
               events={Object.keys(events)}
-              //   event={Object.keys(events)[0]}
               event={event}
               eventsData={events}
             />
@@ -66,7 +73,7 @@ export default function Event({ onClickOutside, show }) {
           menuItems={Object.keys(categoryWiseEvents)}
           onMenuClick={onCategorySelect}
           show={show}
-          isMenuOpen={true}
+          isMenuOpen={firstTimne}
           onClickOutside={onClickOutside}
         />
       )}
@@ -128,7 +135,7 @@ const EventDesc = ({ events, event, eventsData }) => {
                 </p>
                 <p>
                   {">>"} Rules: <br />
-                  {eventsData[currentEvent]?.rules.map((rule) => (
+                  {eventsData[currentEvent]?.rules?.map((rule) => (
                     <span>
                       {" "}
                       {">>"} {rule} <br />{" "}
