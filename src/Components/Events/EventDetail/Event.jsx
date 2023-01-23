@@ -129,7 +129,7 @@ const EventDesc = ({ events, event, eventsData }) => {
                   {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
                 </p>
                 <p>
-                  <span
+                  {/* <span
                     onClick={() => {
                       axios
                         .put(
@@ -150,10 +150,12 @@ const EventDesc = ({ events, event, eventsData }) => {
                         )
                         .catch((err) => alert(err));
                     }}
-                  >
+                  > */}
+                  <a href={eventsData[currentEvent]?.document}>
                     {">>"}{" "}
                     <u style={{ cursor: "pointer" }}> Registration link </u>
-                  </span>
+                  </a>
+                  {/* </span> */}
                 </p>
                 <p>
                   {">>"} Rules: <br />
