@@ -65,15 +65,10 @@ export default function Navbar({ setProfileVisible }) {
       </div>
       <div className="navbar-links" id="toToggle">
         <ul className="navMenus">
-          <li className="navbarItem Buttonclose">
-            <div
-              href="#"
-              onClick={() => {
+          <li className="navbarItem Buttonclose" onClick={() => {
                 document.getElementById("toToggle").style.visibility = "hidden";
-              }}
-            >
+              }}>
               Close X
-            </div>
           </li>
           <li className="navbarItem">
             <Link to={{ pathname: "/", hash: "#events" }}>
@@ -100,7 +95,7 @@ export default function Navbar({ setProfileVisible }) {
               <span>TEAM</span>
             </a>
           </li>
-          <li className="navbarItem Button1">
+          <li className="navbarItem mr-4 nav-button">
             {localStorage.getItem("ts20token") || isLoggedIn ? (
               <span
                 onClick={() => {
@@ -110,15 +105,12 @@ export default function Navbar({ setProfileVisible }) {
                 Profile
               </span>
             ) : (
-              <span onClick={() => login()}>
-                {" "}
                 <Button
                   symbol={"▶️"}
                   btnText={"Login"}
                   btnHeight="100%"
                   btnWidth={"100%"}
-                />{" "}
-              </span>
+                />
             )}
           </li>
         </ul>

@@ -36,8 +36,9 @@
 
 
 .navbarItem {
-    padding: 0.5em;
-    margin: 0.5em;
+    /* padding: 0.5em;
+    margin: 0.5em; */
+    font-size: 16px;
 }
 
 .navbar-links {
@@ -100,14 +101,12 @@
 
 .toggle-button {
     position: absolute;
-    top: .75rem;
     right: 1rem;
     display:none;
     flex-direction: column;
-   /* justify-content: space-between;*/
+   /* justify-content: space-between; */
     width: 15px;
     height: 21px;
-    margin-top: 10px;
 }
 
 .toggle-button .bar {
@@ -131,7 +130,6 @@
     .toggle-button {
         display: flex;
         align-items: center;
-        margin-top: 4%;
     }
 
     .toggle-button .bar {
@@ -145,21 +143,27 @@
     .navbar-links {
         visibility: hidden;
         /* display: none; */
-        width: 100%;
-        margin-top: 38%;     
+        width: 100%;  
+        position: relative;
     }
 
     .navMenus {
+        position: absolute;
+        right: 0px;
         background-color: #555;
         opacity: 80%;
-        height: 650px;
+        align-items: unset;
+        top: 100%;
+        height: auto;
+        backdrop-filter: blur(20px);
+        padding:20px;
     }
 
     .Buttonclose{
-        text-align: center;
-        display: table-column;
         font-size:25px;
-        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .navbar-links ul {
         width: 100%;
@@ -172,21 +176,13 @@
     }
     .navbar-links ul li {
         text-align: center;
-        height: 10%;
-    }
-
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
+        height: 60px;
     }
 
     .navbar-links.active {
         display: flex;
     }
 
-    .Button1{
-        margin-right: 20%;
-        margin-bottom: 20%;
-    }
     .ts-logo {
         width: 100%;
     }
@@ -196,5 +192,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+    .nav-button button{
+        padding: 0px !important;
+        margin: 0px 10% !important;
+        width: 90%;
+        
     }
 }
