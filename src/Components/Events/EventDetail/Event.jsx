@@ -129,9 +129,31 @@ const EventDesc = ({ events, event, eventsData }) => {
                   {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
                 </p>
                 <p>
-                  <a href={eventsData[currentEvent]?.document}>
-                    {">>"} <u> Registration link </u>
-                  </a>
+                  <span
+                    onClick={() => {
+                      axios
+                        .put(
+                          "/user/event",
+                          {
+                            eventCategory:
+                              eventsData[currentEvent]?.eventCategory,
+                            eventName: currentEvent,
+                          },
+                          {
+                            headers: {
+                              Authorization: localStorage.getItem("ts20token"),
+                            },
+                          }
+                        )
+                        .then((res) =>
+                          alert(res.data?.message || res.data?.status)
+                        )
+                        .catch((err) => alert(err));
+                    }}
+                  >
+                    {">>"}{" "}
+                    <u style={{ cursor: "pointer" }}> Registration link </u>
+                  </span>
                 </p>
                 <p>
                   {">>"} Rules: <br />

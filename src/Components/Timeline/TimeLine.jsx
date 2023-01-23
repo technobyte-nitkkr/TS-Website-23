@@ -58,24 +58,54 @@ const TimeLineBody = ({ data }) => {
               ? "You are an admin"
               : "You are not an admin"}
           </div>
-         
+
           <div className="text-bright">
             &gt;&gt;{" "}
-            {userEvents.length == 0 ? (
+            {userEvents.length === 0 ? (
               "You have not registered for any events"
             ) : (
               <>
+                {" "}
+                You have registered for the following events. (Click on the
+                event to unregister)
                 {userEvents.map((event) => {
-                  return <div>&gt;&gt; {event?.eventName}</div>;
+                  return (
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        axios
+                          .put(
+                            "/user/event/unregister",
+                            {
+                              eventName: event.eventName,
+                              eventCategory: event.eventCategory,
+                            },
+                            {
+                              headers: {
+                                Authorization:
+                                  localStorage.getItem("ts20token"),
+                              },
+                            }
+                          )
+                          .then((res) =>
+                            alert(res.data?.message || res.data?.status)
+                          )
+                          .catch((err) => alert(err));
+                      }}
+                    >
+                      &gt;&gt; {event?.eventName}
+                    </div>
+                  );
                 })}
               </>
             )}
           </div>
-            <div className="text-bright">
-              &gt;&gt;{" "}
-
-              <span onClick={logout}>Logout</span>
-            </div>
+          <div className="text-bright">
+            &gt;&gt;{" "}
+            <span style={{ cursor: "pointer" }} onClick={logout}>
+              Logout
+            </span>
+          </div>
         </>
       )}
     </div>
