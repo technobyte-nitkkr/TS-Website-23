@@ -16,13 +16,12 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="foot">
-        <div className="Box-Row-2">
-          <div className="ul1">
-            <p>Developed with ❤️ by Technobyte</p>
+      <footer className="foot flex flex-col py-6">
+          <div className="ul1 text-center pb-4">
+            Developed with ❤️ by Technobyte
           </div>
           <div className="footer-menu">
-            <ul className="ul2">
+            <ul className="flex justify-evenly max-w-3xl m-auto">
               <li>
                 <a href="https://www.instagram.com/technobyte_nitkkr/">
                   <FaInstagram size={"1.3em"} className="icons" />
@@ -45,7 +44,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-        </div>
       </footer>
     </>
   );
