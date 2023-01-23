@@ -12,6 +12,8 @@ function useWindowSize() {
     width: undefined,
     height: undefined,
   });
+  const curosal = useRef()
+
   useEffect(() => {
     function handleResize() {
       setWindowSize({
@@ -33,7 +35,7 @@ const Lecture = () => {
   const size = useWindowSize();
   var lectures = [];
   const [expanded, setExpanded] = useState(0);
-
+  const curosal = useRef();
   useEffect(() => {
     fetch(
       "https://us-central1-techspardha-87928.cloudfunctions.net/api2/lectures",
@@ -51,59 +53,26 @@ const Lecture = () => {
         SetGuestList(data.data.lectures);
       })
       .catch((err) => {});
+      setInterval(()=>{
+        const elem = curosal.current;
+        var next = 0;
+        for(var i of elem.children){
+          if(i.offsetLeft < elem.scrollLeft) next++;
+        }
+        next = (next + 1)%elem.children.length;
+        elem.scrollLeft = (elem.children[next].offsetLeft);
+      }, 2000)
   }, []);
 
   return (
     <>
       <div className="mainContentGL">
-        <div className="carouselGL">
-          {size.width < 768 ? (
-            <Swiper
-              breakpoints={{
-                576: {
-                  width: 576,
-                  slidesPerView: 1,
-                },
-                768: {
-                  width: 768,
-                  slidesPerView: 3,
-                  spaceBetween: 200,
-                },
-              }}
-              spaceBetween={100}
-              centeredSlides={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={{
-                nextEl: ".image-swiper-button-next",
-                prevEl: ".image-swiper-button-prev",
-                disabledClass: "swiper-button-disabled",
-              }}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper"
-            >
-              {guestList.map((item, index) => {
-                return (
-                  <SwiperSlide>
-                    <GuestCard item={item} index={index} expanded={expanded} setExpanded={setExpanded}/>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          ) : (
-            <>
-              {guestList.map((item, index) => {
-                return (
-                  <GuestCard item={item} index={index} expanded={expanded} setExpanded={setExpanded}/>
-                );
-              })}
-            </>
-          )}
+        <div className="carouselGL flex flex-row flex-nowrap overflow-x-hidden overflow-y-hidden scroll-smooth" ref={curosal}>
+          {guestList.map((item, index) => {
+            return (
+              <GuestCard item={item} index={index} expanded={expanded} setExpanded={setExpanded} className={"lecture" + index}/>
+            )})
+          }
         </div>
         <span id="glHelper"></span>
       </div>
@@ -113,20 +82,18 @@ const Lecture = () => {
 
 export default Lecture;
 
-const GuestCard = ({index, item, expanded, setExpanded})=>{
+const GuestCard = ({index, item, className})=>{
   return(
-  <div key={index} className="profile-card p-4 m-4 flex flex-col">
+  <div key={index} className={"profile-card p-4 m-4 flex flex-col "+className}>
     <div className="profile-header pb-4">
       <img src={item.imageUrl} className="mr-4"/>
       <div className="flex flex-col items-start">
-        <h1 className="text-xl font-normal">{item.name}</h1>
+        <h1 className="text-xl font-normal text-left">{item.name}</h1>
         <h2 className="text-md text-gray-400">{item.date}</h2>
       </div>
     </div>
-    <div class="profile-bio overflow-y-scroll bg-[#1C1C1C] p-2 mb-4">
-      <p>
+    <div class="profile-bio overflow-y-scroll bg-[#1C1C1C] p-2 mb-6 h-full">
           {item.desc}
-      </p>
     </div>
     <ul class="profile-social-links flex justify-evenly mb-4">
       <li>
