@@ -80,7 +80,7 @@ margin: 0;
   height: 100px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .profile-card{
     min-width: 290px;
     max-width: 290px;
