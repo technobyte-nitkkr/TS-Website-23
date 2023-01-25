@@ -20,11 +20,18 @@ const NotificationList = () => {
       setNotifs(notifications);
       let obj = {};
 
-      notifications.forEach((notif) => {
+      // notifications.forEach((notif) => {});
+
+      for (
+        let i = 0, j = notifications.length - 1;
+        i < Math.min(4, notifications.length);
+        i++, j--
+      ) {
+        const notif = notifications[j];
         obj[notif.notification.title] = {
           ...notif.notification,
         };
-      });
+      }
 
       setExpandedObj(obj);
       setIsLoading(false);
