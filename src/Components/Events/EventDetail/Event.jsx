@@ -57,32 +57,34 @@ export default function Event({ onClickOutside, show }) {
 
   return (
     <>
-      {isLoading ? (
+      {/* {isLoading ? (
         <GenericLoader />
       ) : isFetching ? (
         <GenericLoader />
-      ) : (
-        <Modal
-          element={
-            <EventDesc
-              events={Object.keys(events)}
-              event={event}
-              eventsData={events}
-            />
-          }
-          menuItems={Object.keys(categoryWiseEvents)}
-          onMenuClick={onCategorySelect}
-          show={show}
-          isMenuOpen={firstTimne}
-          onClickOutside={onClickOutside}
-        />
-      )}
+      ) : ( */}
+      <Modal
+        element={
+          <EventDesc
+            events={Object.keys(events)}
+            event={event}
+            isFetching={isFetching}
+            eventsData={events}
+          />
+        }
+        menuItems={Object.keys(categoryWiseEvents)}
+        onMenuClick={onCategorySelect}
+        show={show}
+        isMenuOpen={firstTimne}
+        onClickOutside={onClickOutside}
+      />
+      {/* )} */}
     </>
   );
 }
 
-const EventDesc = ({ events, event, eventsData }) => {
+const EventDesc = ({ events, event, eventsData, isFetching }) => {
   const [currentEvent, setCurrentEvent] = useState(event);
+  const [switchingCurrentEvent, setSwitchingCurrentEvent] = useState(false);
 
   useEffect(() => {}, [event, events, eventsData]);
 
@@ -93,21 +95,29 @@ const EventDesc = ({ events, event, eventsData }) => {
           <div className="event-top event-names">
             <div>Event-List.md</div>
           </div>
-          <div className="event-list-cont">
-            {events.map((e, ind) => {
-              return (
-                <div
-                  className={`event-indivi ${
-                    currentEvent === e ? "event-indivi-active" : ""
-                  }`}
-                  onClick={() => setCurrentEvent(e)}
-                >
-                  {ind < 9 ? "0" : ""}
-                  {ind + 1} <div>{e}</div>
-                </div>
-              );
-            })}
-          </div>
+          {isFetching ? (
+            <div> ✨ Fetching event list... </div>
+          ) : (
+            <div className="event-list-cont">
+              {events.map((e, ind) => {
+                return (
+                  <div
+                    className={`event-indivi ${
+                      currentEvent === e ? "event-indivi-active" : ""
+                    }`}
+                    onClick={() => {
+                      setSwitchingCurrentEvent(true);
+                      setCurrentEvent(e);
+                      setTimeout(() => setSwitchingCurrentEvent(false), 1000);
+                    }}
+                  >
+                    {ind < 9 ? "0" : ""}
+                    {ind + 1} <div>{e}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
         <div className="event-terminal-container">
           <Terminal
@@ -121,13 +131,10 @@ const EventDesc = ({ events, event, eventsData }) => {
                   {new Date(eventsData[currentEvent]?.startTime).toDateString()}{" "}
                 </p>
                 <p>
-                  {">>"} Start Time:{" "}
+                  {">>"} End Time:{" "}
                   {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
                 </p>
-                <p>
-                  {">>"} Start Time:{" "}
-                  {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
-                </p>
+
                 <p>
                   {/* <span
                     onClick={() => {
@@ -176,9 +183,16 @@ const EventDesc = ({ events, event, eventsData }) => {
           <img src="/TS_LOGO.svg" alt="" />
         </div>
         <div className="event-details">
-          <div className="event-heading">{currentEvent}</div>
-          <img src={eventsData[currentEvent]?.poster} alt="" />
-          <div>{eventsData[currentEvent]?.description}</div>
+          {switchingCurrentEvent || isFetching ? (
+            <div> ✨ Fetching event details... </div>
+          ) : (
+            <>
+              {" "}
+              <div className="event-heading">{currentEvent}</div>
+              <img src={eventsData[currentEvent]?.poster} alt="" />
+              <div>{eventsData[currentEvent]?.description}</div>
+            </>
+          )}
         </div>
       </div>
     </div>
