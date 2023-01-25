@@ -1,20 +1,22 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import GenericLoader from "../../Loader/GenericLoader";
 import Modal from "../../Modal/Modal";
 import Terminal from "../../Terminal/Terminal";
+import GenericLoader from "../../Loader/GenericLoader";
 import "./style.css";
 
-export default function Event({ onClickOutside, show }) {
+export default function Event({ onClickOutside, show, selectedCategory }) {
   const [events, setEvents] = useState({});
   const [categoryWiseEvents, setCategoryWiseEvents] = useState({});
   const [event, setEvent] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
   const [firstTimne, setFirstTime] = useState(true);
 
-  const [currentCategory, setCurrentCategory] = useState("Astronomy");
+  const [currentCategory, setCurrentCategory] = useState(
+    selectedCategory ? selectedCategory : "Astronomy"
+  );
 
   const onCategorySelect = (category) => {
     setIsFetching(true);
@@ -33,7 +35,7 @@ export default function Event({ onClickOutside, show }) {
 
         setEvents(eventData);
         setEvent(Object.keys(eventData)[0]);
-        setTimeout(() => setIsFetching(false), 1000);
+        setTimeout(() => setIsFetching(false), 500);
       });
   };
 
@@ -50,34 +52,33 @@ export default function Event({ onClickOutside, show }) {
 
       setCategoryWiseEvents(categories);
       setCurrentCategory(Object.keys(categories)[0]);
-      onCategorySelect(currentCategory);
+      onCategorySelect(selectedCategory ? selectedCategory : currentCategory);
+      selectedCategory = null;
       setIsLoading(false);
     });
   }, []);
 
   return (
     <>
-      {/* {isLoading ? (
+      {isLoading ? (
         <GenericLoader />
-      ) : isFetching ? (
-        <GenericLoader />
-      ) : ( */}
-      <Modal
-        element={
-          <EventDesc
-            events={Object.keys(events)}
-            event={event}
-            isFetching={isFetching}
-            eventsData={events}
-          />
-        }
-        menuItems={Object.keys(categoryWiseEvents)}
-        onMenuClick={onCategorySelect}
-        show={show}
-        isMenuOpen={firstTimne}
-        onClickOutside={onClickOutside}
-      />
-      {/* )} */}
+      ) : (
+        <Modal
+          element={
+            <EventDesc
+              events={Object.keys(events)}
+              event={event}
+              isFetching={isFetching}
+              eventsData={events}
+            />
+          }
+          menuItems={Object.keys(categoryWiseEvents)}
+          onMenuClick={onCategorySelect}
+          show={show}
+          isMenuOpen={firstTimne}
+          onClickOutside={onClickOutside}
+        />
+      )}
     </>
   );
 }
