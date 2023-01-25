@@ -69,7 +69,7 @@ export default function TeamDetails() {
             return (
               <div class="nft" style={{ padding: "5px", margin: "20px" }}>
                 <div class="team-card-main">
-                  <img class="tokenImage" src={x.imageUrl} alt="post-holder" />
+                  <img class="tokenImage placeholder-img" src={x.imageUrl} alt="post-holder" />
                   <h2 className="person-name">{x.name}</h2>
                   <hr />
                   <p class="person-post">{x.post}</p>

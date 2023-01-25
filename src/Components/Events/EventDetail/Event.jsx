@@ -72,6 +72,7 @@ export default function Event({ onClickOutside, show, selectedCategory }) {
               eventsData={events}
             />
           }
+
           menuItems={Object.keys(categoryWiseEvents)}
           onMenuClick={onCategorySelect}
           show={show}
@@ -174,8 +175,18 @@ const EventDesc = ({ events, event, eventsData, isFetching }) => {
                     </span>
                   ))}
                 </p>
+                <p>
+                  {">>"} Cordiantors:  <br />
+                  {eventsData[currentEvent]?.coordinators?.map((Cord) => (
+                    <span>
+                      {" "}
+                      {">>"} {Cord.coordinator_name} : <a href={`https://wa.me+91${Cord.coordinator_number}`}>{Cord.coordinator_number}</a> <br />{" "}
+                    </span>
+                  ))}
+                </p>
               </div>
             }
+
           />
         </div>
       </div>
@@ -190,7 +201,7 @@ const EventDesc = ({ events, event, eventsData, isFetching }) => {
             <>
               {" "}
               <div className="event-heading">{currentEvent}</div>
-              <img src={eventsData[currentEvent]?.poster} alt="" />
+              <img className="placeholder-img" src={eventsData[currentEvent]?.poster} alt="" />
               <div>{eventsData[currentEvent]?.description}</div>
             </>
           )}
