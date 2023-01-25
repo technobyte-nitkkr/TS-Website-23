@@ -52,12 +52,6 @@ const TimeLineBody = ({ data }) => {
           <div className="text-bright">
             &gt;&gt; Role: {JSON.parse(data).role}
           </div>
-          <div className="text-bright">
-            &gt;&gt;{" "}
-            {JSON.parse(data).admin
-              ? "You are an admin"
-              : "You are not an admin"}
-          </div>
 
           {/* <div className="text-bright">
             &gt;&gt;{" "}
