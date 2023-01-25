@@ -40,18 +40,7 @@ const NotificationList = () => {
 
   return (
     <div className="notificationContainer">
-      <h2
-        style={{
-          color: "#FFF",
-          fontSize: "32px",
-          fontWeight: 600,
-          fontFamily: "JetBrainsMono",
-          paddingLeft: "8px",
-        }}
-      >
-        {" "}
-        Recent Notifications:{" "}
-      </h2>
+      <h2 className="recentNotifs"> Recent Notifications: </h2>
       {isLoading ? (
         <NotificationItem title={"✨ Fetching Notifications"} />
       ) : (
