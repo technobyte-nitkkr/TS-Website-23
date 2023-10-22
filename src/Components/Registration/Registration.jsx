@@ -6,7 +6,7 @@ import "./style.css";
 export default function Registration({ showBtn }) {
   return (
     <div className="reg-container">
-      <h2>What is Techspardha 2023?</h2>
+      <h2>What is Techspardha 2024?</h2>
       <p>
         Techspardha is the annual techno-managerial festival of National
         Institute of Technology, Kurukshetra. It started in 1995 as

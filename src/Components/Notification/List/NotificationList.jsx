@@ -41,28 +41,7 @@ const NotificationList = () => {
   return (
     <div className="notificationContainer">
       <h2 className="recentNotifs"> Recent Notifications: </h2>
-      {isLoading ? (
-        <NotificationItem title={"✨ Fetching Notifications"} />
-      ) : (
-        <>
-          {" "}
-          {Object.keys(expandedObj).map((notif, key) => (
-            <div
-              onClick={() => {
-                setIsOpen(true);
-              }}
-              key={key}
-            >
-              <NotificationItem
-                title={notif}
-                content={notif.description}
-                key={key}
-              />
-            </div>
-          ))}
-        </>
-      )}
-
+      <NotificationItem title={"✨ Techspardha'24 from 27-29th Jan 2024!"} />
       <div
         className="notificationBtnContainer"
         id="aboutElementHelper"

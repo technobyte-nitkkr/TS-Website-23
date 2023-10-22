@@ -72,7 +72,6 @@ export default function Event({ onClickOutside, show, selectedCategory }) {
               eventsData={events}
             />
           }
-
           menuItems={Object.keys(categoryWiseEvents)}
           onMenuClick={onCategorySelect}
           show={show}
@@ -125,47 +124,7 @@ const EventDesc = ({ events, event, eventsData, isFetching }) => {
           <Terminal
             element={
               <div style={{ fontFamily: "JetBrainsMono" }}>
-                <p>
-                  {">>"} venue: {eventsData[currentEvent]?.venue}{" "}
-                </p>
-                <p>
-                  {">>"} Start Time:{" "}
-                  {new Date(eventsData[currentEvent]?.startTime).toDateString()}{" "}
-                </p>
-                <p>
-                  {">>"} End Time:{" "}
-                  {new Date(eventsData[currentEvent]?.endTime).toDateString()}{" "}
-                </p>
-
-                <p>
-                  {/* <span
-                    onClick={() => {
-                      axios
-                        .put(
-                          "/user/event",
-                          {
-                            eventCategory:
-                              eventsData[currentEvent]?.eventCategory,
-                            eventName: currentEvent,
-                          },
-                          {
-                            headers: {
-                              Authorization: localStorage.getItem("ts20token"),
-                            },
-                          }
-                        )
-                        .then((res) =>
-                          alert(res.data?.message || res.data?.status)
-                        )
-                        .catch((err) => alert(err));
-                    }}
-                  > */}
-                  <a href={eventsData[currentEvent]?.document}>
-                    {">>"}{" "}
-                    <u style={{ cursor: "pointer" }}> Registration link </u>
-                  </a>
-                  {/* </span> */}
-                </p>
+                <p></p>
                 <p>
                   {">>"} Rules: <br />
                   {eventsData[currentEvent]?.rules?.map((rule) => (
@@ -176,17 +135,20 @@ const EventDesc = ({ events, event, eventsData, isFetching }) => {
                   ))}
                 </p>
                 <p>
-                  {">>"} Cordiantors:  <br />
+                  {">>"} Coordinators: <br />
                   {eventsData[currentEvent]?.coordinators?.map((Cord) => (
                     <span>
                       {" "}
-                      {">>"} {Cord.coordinator_name} : <a href={`https://wa.me+91${Cord.coordinator_number}`}>{Cord.coordinator_number}</a> <br />{" "}
+                      {">>"} {Cord.coordinator_name} :{" "}
+                      <a href={`https://wa.me+91${Cord.coordinator_number}`}>
+                        {Cord.coordinator_number}
+                      </a>{" "}
+                      <br />{" "}
                     </span>
                   ))}
                 </p>
               </div>
             }
-
           />
         </div>
       </div>
@@ -201,7 +163,11 @@ const EventDesc = ({ events, event, eventsData, isFetching }) => {
             <>
               {" "}
               <div className="event-heading">{currentEvent}</div>
-              <img className="placeholder-img" src={eventsData[currentEvent]?.poster} alt="" />
+              <img
+                className="placeholder-img"
+                src={eventsData[currentEvent]?.poster}
+                alt=""
+              />
               <div>{eventsData[currentEvent]?.description}</div>
             </>
           )}
